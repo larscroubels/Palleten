@@ -1,179 +1,1309 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Palletaanmeldingen Izegem</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a7a5c'/%3E%3Cpath d='M8 9h16v8H8zM6 20h20M6 24h20M8 20v4M16 20v4M24 20v4' stroke='white' stroke-width='2' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
-:root{--navy:#142d4e;--blue:#1769aa;--blue2:#eaf3fb;--ink:#182536;--muted:#718096;--line:#e4eaf0;--bg:#f4f7fa;--white:#fff;--green:#16845b;--shadow:0 12px 35px rgba(25,48,75,.08)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}button,input{font:inherit}.topbar{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,56px);position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:14px}.brandlogo{font-size:20px;font-weight:950;letter-spacing:-1.4px;color:#183b28;font-style:italic;border-left:5px solid #68a83f;padding:7px 0 7px 10px;line-height:1}.brandname{font-weight:800;color:var(--navy);font-size:17px;letter-spacing:-.4px}.brandname small{display:block;color:#8290a0;font-size:10px;letter-spacing:1.7px;font-weight:700;margin-top:2px}.topright{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px}.live{width:8px;height:8px;border-radius:50%;background:#26a269;display:inline-block;margin-right:6px}.wrap{max-width:1440px;margin:0 auto;padding:34px clamp(16px,4vw,56px) 80px}.heading{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:26px}.eyebrow{color:var(--blue);font-weight:800;font-size:11px;letter-spacing:1.7px;text-transform:uppercase}.heading h1{margin:7px 0 6px;font-size:clamp(26px,3vw,36px);letter-spacing:-1.2px;color:var(--navy)}.heading p{margin:0;color:var(--muted);font-size:14px}.datepill{background:white;border:1px solid var(--line);border-radius:12px;padding:11px 15px;color:#526174;font-size:13px;white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:22px}.stat{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px 20px;box-shadow:0 3px 12px rgba(25,48,75,.025)}.stat .label{font-size:12px;color:var(--muted);font-weight:650}.stat .value{font-size:29px;font-weight:800;color:var(--navy);letter-spacing:-1px;margin-top:8px}.stat .unit{font-size:12px;color:var(--muted);font-weight:600;margin-left:5px;letter-spacing:0}.content{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.sectionhead{padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}.sectiontitle{font-weight:800;color:var(--navy);font-size:16px}.sectiondesc{color:var(--muted);font-size:12px;margin-top:4px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:white;color:#41536a;padding:10px 14px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;transition:.15s}.btn:hover{background:#f5f8fb}.btn.primary{background:var(--blue);border-color:var(--blue);color:white}.btn.primary:hover{background:#105b96}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:850px}th{font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:#748398;background:#f8fafc;text-align:center;padding:14px 10px;border-bottom:1px solid var(--line)}th:first-child,td:first-child{text-align:left;padding-left:24px}.grouphead{background:#edf5fc;color:var(--navy);font-size:12px}td{padding:9px 10px;border-bottom:1px solid #edf1f5;text-align:center;font-size:13px}tr:last-child td{border-bottom:0}.supplier{font-weight:700;color:#34465c;min-width:220px}.supplierinput{width:100%;min-width:190px;border:1px solid #e0e7ee;border-radius:8px;padding:9px 10px;color:#24384f;background:#fff;outline:none}.supplierinput:focus{border-color:#63a6d9;box-shadow:0 0 0 3px #e6f3fc}.supplierinput::placeholder{color:#a0acb9;font-weight:500}.num{width:78px;padding:9px 8px;border:1px solid #e0e7ee;border-radius:8px;text-align:center;color:#24384f;background:#fff;outline:none}.num:focus{border-color:#63a6d9;box-shadow:0 0 0 3px #e6f3fc}.min{width:82px}.totalrow{background:#f7fafc;font-weight:800;color:var(--navy)}.floor{padding:20px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px}.floorlabel{font-weight:750;color:#34465c;font-size:13px}.floorhint{font-size:12px;color:var(--muted);margin-top:4px}.floorinput{display:flex;align-items:center;gap:10px}.footerline{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:#fbfcfd;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.printcta{display:flex;align-items:center;gap:10px;margin-top:20px;background:var(--navy);color:white;padding:19px 22px;border-radius:15px;justify-content:space-between}.printcta strong{font-size:15px}.printcta span{font-size:12px;color:#c4d4e5;display:block;margin-top:4px}.printcta button{background:#fff;color:var(--navy);border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}.floatwrap{position:fixed;right:25px;bottom:25px;z-index:10}.truckbtn{width:58px;height:58px;border:0;border-radius:19px;background:var(--blue);color:white;box-shadow:0 9px 24px rgba(23,105,170,.35);cursor:pointer;font-size:25px}.supplierpop{display:none;position:absolute;right:0;bottom:70px;width:300px;background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px}.supplierpop.open{display:block}.pophead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.pophead strong{color:var(--navy)}.close{border:0;background:#f1f4f7;border-radius:8px;width:28px;height:28px;cursor:pointer}.supplierlist{max-height:260px;overflow:auto;margin:10px 0}.supplieritem{padding:8px 3px;border-bottom:1px solid #f0f2f5;font-size:13px;display:flex;justify-content:space-between;gap:10px}.del{border:0;background:none;color:#c05c5c;cursor:pointer}.addrow{display:flex;gap:7px}.addrow input{min-width:0;flex:1;border:1px solid var(--line);border-radius:8px;padding:9px}.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:10px}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#172d47;color:white;padding:11px 16px;border-radius:10px;font-size:13px;opacity:0;pointer-events:none;transition:.2s;z-index:20}.toast.show{opacity:1}.empty{text-align:center;padding:25px;color:var(--muted)}
-@media(max-width:850px){.stats{grid-template-columns:repeat(2,1fr)}.heading{align-items:flex-start;flex-direction:column}.sectionhead{align-items:flex-start;flex-direction:column}.floor{align-items:flex-start;flex-direction:column}.printcta{align-items:flex-start;flex-direction:column}.topright .status{display:none}}
-@media(max-width:480px){.stats{gap:9px}.stat{padding:14px}.stat .value{font-size:24px}.topbar{height:66px}.brandlogo{font-size:17px}.datepill{font-size:12px}}
-@media print{body{background:white}.topbar{position:static;border:0;padding:0 0 14px}.wrap{max-width:none;padding:10px 0}.heading{margin-bottom:15px}.stats{gap:8px;margin-bottom:14px}.stat{box-shadow:none;padding:10px;border:1px solid #d7dfe7}.stat .value{font-size:21px}.content{box-shadow:none;border:1px solid #cbd5df}.sectionhead{padding:12px 15px}.actions,.floatwrap,.printcta,.footerline .noprint,.floorhint{display:none!important}.tablewrap{overflow:visible}table{min-width:0;font-size:10px}th,td{padding:6px 5px;font-size:9px}th:first-child,td:first-child{padding-left:10px}.num{border:0;padding:0;width:auto;background:transparent;font-size:10px}.supplierinput{border:0;padding:0;background:transparent;font-size:10px;min-width:0}.floor{padding:10px 15px}.floorinput .num{width:40px}.printnote{display:block!important}.eyebrow{font-size:9px}.heading h1{font-size:24px}}
-.printnote{display:none}
+:root{
+  color-scheme:light;
+  --bg:#f2f5f4;--surface:#fff;--surface-2:#f7f9f8;--line:#e1e7e4;--line-2:#edf1ef;
+  --ink:#14201b;--ink-2:#47574f;--muted:#76857e;--faint:#a7b3ad;
+  --brand:#0a7a5c;--brand-600:#086a50;--brand-700:#06553f;--brand-50:#e8f4ef;--brand-100:#cde8dc;
+  /* Ambient: palletten iets sterker getint, mix lichter */
+  --amb:#eb6834;--amb-ink:#93391a;--amb-mixink:#b25a33;
+  --amb-head:#fde5d6;--amb-pal:#fff0e7;--amb-mix:#fffaf6;--amb-pal-line:#efcbb6;--amb-mix-line:#f2e2d8;
+  /* Cool */
+  --cool:#2a78d6;--cool-ink:#1b4c89;--cool-mixink:#4675b0;
+  --cool-head:#dae8fa;--cool-pal:#ecf3fd;--cool-mix:#f8fbff;--cool-pal-line:#c3d8f3;--cool-mix-line:#dde7f5;
+  --floor:#1baf7a;
+  --danger:#c43c3c;--danger-50:#fdeeee;
+  --warn-bg:#fff8e7;--warn-line:#f1dca2;--warn-ink:#6b5110;
+  --radius:12px;
+  --shadow-sm:0 1px 2px rgba(16,32,26,.05);
+  --shadow-lg:0 14px 40px rgba(16,32,26,.16),0 2px 6px rgba(16,32,26,.06);
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 var(--font);-webkit-font-smoothing:antialiased}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.i{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+kbd{display:inline-block;min-width:20px;padding:0 5px;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;background:#fff;font:600 11px/17px var(--font);color:var(--ink-2);text-align:center}
+.s-amb{background:var(--amb)}.s-cool{background:var(--cool)}.s-floor{background:var(--floor)}
 
-/* Rustiger en functioneler: meer een interne magazijntool, minder dashboard */
-.brandlogo{width:112px;height:48px;object-fit:contain;border:0;padding:0;display:block}
-.topbar{height:68px;padding:0 30px}
-.brand{gap:18px}.brandname{font-size:15px;letter-spacing:0;font-weight:750}.brandname small{font-size:9px;letter-spacing:1.2px}
-.wrap{max-width:1360px;padding-top:26px}
-.heading{margin-bottom:18px}.heading h1{font-size:29px;letter-spacing:-.5px}
-.stats{gap:10px;margin-bottom:16px}.stat{border-radius:8px;box-shadow:none;padding:13px 16px}.stat .value{font-size:25px;margin-top:4px}
-.content{border-radius:9px;box-shadow:none}.sectionhead{padding:16px 18px}.sectiontitle{font-size:15px}.btn{border-radius:6px}.btn.primary{background:#087b63;border-color:#087b63}.btn.primary:hover{background:#066b56}
-th{background:#f2f5f6;font-size:10px}td{padding:7px 8px}.supplierinput,.num{border-radius:4px}.supplierinput:focus,.num:focus{border-color:#087b63;box-shadow:0 0 0 2px #e2f2ed}
-.grouphead{background:#e8f1ee;color:#183d35}.totalrow{background:#f1f5f3}.floor{padding:15px 18px}.footerline{padding:12px 18px}
-.printcta{background:#173b35;border-radius:8px;padding:15px 18px}.printcta button{border-radius:6px}
-.floatwrap{right:20px;bottom:20px;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.truckbtn{background:#087b63;border-radius:50%;width:52px;height:52px;box-shadow:0 3px 10px #0002}.phonebtn{background:#fff;color:#173b35;border:1px solid #dce5e1;border-radius:50%;width:52px;height:52px;box-shadow:0 3px 10px #0002;display:grid;place-items:center;cursor:pointer}.phonebtn svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.phonepop{display:none;position:absolute;right:0;bottom:124px;width:310px;max-height:min(70vh,620px);overflow:auto;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 8px 24px #0002;padding:16px}.phonepop.open{display:block}.phonegroup{padding:9px 0;border-bottom:1px solid #e8edf0}.phonegroup:last-child{border-bottom:0}.phonegroup h3{margin:0 0 7px;font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:#087b63}.phonecontact{display:flex;justify-content:space-between;gap:14px;padding:5px 2px;font-size:13px;color:#34465c}.phonecontact strong{font-variant-numeric:tabular-nums;color:#173b35}.phone-divider{border-top:1px dashed #cbd5df;margin:6px 0}
-.supplierpop{border-radius:8px;box-shadow:0 8px 24px #0002}.supplieritem{padding:7px 2px}
-@media(max-width:850px){.topbar{padding:0 16px}.brandlogo{width:88px;height:40px}}
-@media print{.brandlogo{width:90px;height:38px}}
+/* ---------- Topbalk ---------- */
+.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;height:64px;padding:0 24px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.logo{width:96px;height:44px;object-fit:contain;display:block}
+.logo-fallback{font-weight:900;font-style:italic;font-size:19px;color:var(--brand-700);letter-spacing:-.04em}
+.brand-div{width:1px;height:28px;background:var(--line)}
+.brand-title{font-weight:700;font-size:15px;letter-spacing:-.01em;line-height:1.15;white-space:nowrap}
+.brand-title small{display:block;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+.spacer{flex:1}
+.topactions{display:flex;align-items:center;gap:8px}
+.savestate{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);white-space:nowrap;margin-right:6px}
+.savestate .dot{width:7px;height:7px;border-radius:50%;background:#2fa36b;transition:background .2s}
+.savestate.saving .dot{background:#d9a21b}
+.savestate.error{color:var(--danger);font-weight:700}.savestate.error .dot{background:var(--danger)}
+.toolbtn{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 12px;border:1px solid var(--line);background:#fff;border-radius:9px;font-weight:600;font-size:13px;color:var(--ink-2)}
+.toolbtn:hover{background:var(--surface-2);color:var(--ink)}
+.toolbtn .i{width:17px;height:17px}
+.storagewarn{background:var(--danger);color:#fff;text-align:center;padding:9px 16px;font-weight:600;font-size:13px}
 
-/* Duidelijk onderscheid tussen Ambient en Cool */
-.ambient-head{background:#e8f3e9!important;color:#285d3a!important;border-bottom:2px solid #8ab99a!important}
-.cool-head{background:#e7f0fb!important;color:#24558a!important;border-bottom:2px solid #8db4df!important}
-.ambient-col{background:#f5faf5}
-.cool-col{background:#f3f7fd}
-tbody tr:hover .ambient-col{background:#eaf5eb}tbody tr:hover .cool-col{background:#e8f1fc}
-.ambient-col .num{border-color:#d5e7d8}.cool-col .num{border-color:#d5e1f1}
-.stat:has(#ambientTotal){border-top:4px solid #4b9560}.stat:has(#coolTotal){border-top:4px solid #4e85c3}
-#ambientTotal{color:#347448}#coolTotal{color:#326da8}
+/* ---------- Algemeen ---------- */
+.wrap{max-width:1400px;margin:0 auto;padding:22px 24px 72px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;padding:0 15px;border-radius:9px;border:1px solid var(--line);background:#fff;font-weight:600;font-size:13px;color:var(--ink-2);white-space:nowrap;transition:background .12s,border-color .12s,color .12s}
+.btn:hover{background:var(--surface-2);color:var(--ink);border-color:#d0d8d4}
+.btn .i{width:16px;height:16px}
+.btn:disabled{opacity:.45;cursor:default;pointer-events:none}
+.btn-primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-600);border-color:var(--brand-600);color:#fff}
+.btn-danger:hover{color:var(--danger);border-color:#efc6c6;background:var(--danger-50)}
+.btn-sm{height:32px;padding:0 11px;font-size:12.5px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+.cardtitle{font-weight:700;font-size:15px;letter-spacing:-.01em}
+.empty{padding:34px 20px;text-align:center;color:var(--muted);font-size:13px}
+.empty b{display:block;color:var(--ink-2);font-size:14.5px;margin-bottom:3px}
+
+/* ---------- Dagkop ---------- */
+.dayhead{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand)}
+.dayline{display:flex;align-items:center;gap:10px;margin-top:3px}
+.dayline h1{margin:0;font-size:26px;letter-spacing:-.025em;line-height:1.15}
+.badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--brand-50);color:var(--brand-700)}
+.dayactions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.byfield{display:flex;align-items:center;gap:8px;height:40px;padding:0 4px 0 12px;border:1px solid var(--line);border-radius:9px;background:#fff;font-size:12px;color:var(--muted);font-weight:600;cursor:text}
+.byfield input{border:0;outline:0;height:32px;width:150px;font-size:13.5px;color:var(--ink);font-weight:600;background:transparent}
+.byfield input::placeholder{color:var(--faint);font-weight:500}
+.byfield:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-50)}
+.notice{display:flex;align-items:center;gap:10px;padding:9px 10px 9px 14px;border-radius:10px;background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn-ink);font-size:13px;margin-bottom:14px;flex-wrap:wrap}
+.notice .acts{display:flex;gap:6px;margin-left:auto}
+
+/* ---------- KPI-tegels ---------- */
+.kpis{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:12px;margin-bottom:16px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px 15px;box-shadow:var(--shadow-sm);min-width:0}
+.kpi-label{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.kpi-label .sw{width:10px;height:10px;border-radius:3px;flex:none}
+.kpi-label .i{width:15px;height:15px;color:var(--muted)}
+.kpi-value{font-size:30px;font-weight:700;letter-spacing:-.025em;line-height:1.1;margin-top:7px;white-space:nowrap}
+.kpi-value .u{font-size:14px;font-weight:600;color:var(--muted);margin:0 6px 0 3px;letter-spacing:0}
+.kpi-value .u:last-child{margin-right:0}
+.kpi-sub{font-size:12px;color:var(--muted);margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi-sub b{color:var(--ink-2);font-weight:650}
+.kpi-total .kpi-value{font-size:34px}
+.splitbar{display:flex;gap:2px;height:8px;margin-top:11px;border-radius:99px;background:var(--line-2)}
+.splitbar span{height:100%;border-radius:99px;min-width:4px}
+.splitbar.has{background:none}
+
+/* ---------- Dagblad-tabel ---------- */
+.sheet{overflow:hidden}
+.sheethead{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.sheetmeta{font-size:12px;color:var(--muted);margin-top:1px}
+.tablewrap{overflow-x:auto;position:relative}
+table.grid{width:100%;border-collapse:separate;border-spacing:0;min-width:1000px}
+.grid th{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding:7px 6px;background:var(--surface-2);border-bottom:1px solid var(--line);white-space:nowrap;text-align:center}
+.grid td{padding:5px 6px;border-bottom:1px solid var(--line-2);text-align:center;vertical-align:middle}
+/* groepskoppen */
+.grid .gh{font-size:12px;padding:10px 6px 8px;border-bottom:0}
+.gh-in{display:inline-flex;align-items:center;gap:7px}
+.gh .i{width:15px;height:15px}
+.gh .temp{font-weight:600;letter-spacing:0;text-transform:none;opacity:.75;font-size:11px}
+.grid .gh-amb{background:var(--amb-head);color:var(--amb-ink);box-shadow:inset 0 3px 0 var(--amb)}
+.grid .gh-cool{background:var(--cool-head);color:var(--cool-ink);box-shadow:inset 0 3px 0 var(--cool)}
+/* palletten (sterker) vs mix (lichter) */
+.grid .amb.pal{background:var(--amb-pal)}
+.grid .amb.mix{background:var(--amb-mix)}
+.grid .cool.pal{background:var(--cool-pal)}
+.grid .cool.mix{background:var(--cool-mix)}
+.grid th.amb.pal{color:var(--amb-ink)}.grid th.amb.mix{color:var(--amb-mixink)}
+.grid th.cool.pal{color:var(--cool-ink)}.grid th.cool.mix{color:var(--cool-mixink)}
+.grid th.pal{vertical-align:bottom;padding-bottom:9px}
+.grid th.mixhead{padding:8px 10px 0;border-bottom:0;letter-spacing:.1em}
+.grid th.mixhead span{display:block;padding-bottom:4px;border-bottom:2px solid currentColor;opacity:.85}
+.grid th.mixsub{padding-top:6px;padding-bottom:9px;text-transform:none;letter-spacing:0;font-size:11.5px;font-weight:650}
+.grid .gstart{border-left:1px solid var(--line)}
+.grid .amb.ml{border-left:1px solid var(--amb-pal-line)}
+.grid .cool.ml{border-left:1px solid var(--cool-pal-line)}
+.grid td.ml{padding-right:2px}
+.grid td.mr{padding-left:2px}
+.grid .c-idx{width:46px;color:var(--faint);font-size:12px;font-variant-numeric:tabular-nums}
+.grid .c-sup{text-align:left;min-width:250px;padding-left:4px}
+.grid th.c-sup{padding-left:14px;vertical-align:bottom;padding-bottom:9px}
+.grid th.c-idx,.grid th.c-tot{vertical-align:bottom;padding-bottom:9px}
+.grid .c-tot{width:86px;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums;border-left:1px solid var(--line)}
+.grid th.c-tot{font-size:10.5px}
+.grid .c-del{width:46px;padding:0}
+.dash{color:var(--faint);font-weight:500}
+/* invoervelden */
+.cell{width:100%;height:36px;border:1px solid #dde4e1;border-radius:7px;background:#fff;outline:0;padding:0 10px;transition:border-color .1s,box-shadow .1s}
+.cell:hover{border-color:#c4cec9}
+.cell:focus{border-color:var(--brand)!important;box-shadow:0 0 0 3px var(--brand-100)}
+.sup{font-weight:600}
+.sup::placeholder{color:var(--faint);font-weight:500}
+.n{width:66px;text-align:center;font-variant-numeric:tabular-nums;font-size:14.5px;padding:0 6px}
+.n::placeholder{color:#cfd6d2;font-weight:500}
+.amb.pal .cell{border-color:var(--amb-pal-line)}.cool.pal .cell{border-color:var(--cool-pal-line)}
+.amb.mix .cell{border-color:var(--amb-mix-line)}.cool.mix .cell{border-color:var(--cool-mix-line)}
+.pal .n{font-weight:750;color:var(--ink)}
+.mix .n{font-weight:600;color:var(--ink-2)}
+.minwrap{position:relative;display:inline-block}
+.minwrap .n{width:80px;padding-right:28px}
+.minwrap .u{position:absolute;right:9px;top:50%;transform:translateY(-50%);font-size:10.5px;color:var(--faint);pointer-events:none}
+/* rijstatus */
+.grid tbody tr:hover td{background-image:linear-gradient(rgba(10,122,92,.03),rgba(10,122,92,.03))}
+.grid tbody tr:focus-within td{background-image:linear-gradient(rgba(10,122,92,.06),rgba(10,122,92,.06))}
+.grid tbody tr:focus-within .c-idx{color:var(--brand);font-weight:700;box-shadow:inset 3px 0 0 var(--brand)}
+.grid tbody tr.is-empty:last-child .c-idx span{display:none}
+.grid tbody tr.is-empty:last-child .c-idx::after{content:"+";font-size:16px;font-weight:600;color:var(--brand)}
+.grid tbody tr.is-empty:last-child .cell:not(:focus){background:transparent;border-style:dashed}
+.del{opacity:0;width:30px;height:30px;border:0;background:none;border-radius:7px;color:var(--muted);display:inline-grid;place-items:center}
+.del .i{width:16px;height:16px}
+.grid tr:hover .del,.grid tr:focus-within .del{opacity:1}
+.del:hover{background:var(--danger-50);color:var(--danger)}
+.grid tr.is-empty .del{visibility:hidden}
+/* totaalrij */
+.grid tfoot td{background:var(--surface-2);border-top:1px solid var(--line);border-bottom:0;font-weight:700;font-variant-numeric:tabular-nums;padding:12px 6px;font-size:14.5px}
+.grid tfoot td.amb.pal{background:var(--amb-head);color:var(--amb-ink)}
+.grid tfoot td.amb.mix{background:var(--amb-pal);color:var(--amb-mixink)}
+.grid tfoot td.cool.pal{background:var(--cool-head);color:var(--cool-ink)}
+.grid tfoot td.cool.mix{background:var(--cool-pal);color:var(--cool-mixink)}
+.grid tfoot .c-sup{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2);padding-left:14px}
+.grid tfoot .c-tot{font-size:16px}
+/* vloer & opmerkingen */
+.sheetfoot{display:grid;grid-template-columns:minmax(300px,1fr) 1.6fr;border-top:1px solid var(--line)}
+.floorbox{padding:16px 18px;border-right:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.fl-title{font-weight:650}
+.fl-hint{font-size:12px;color:var(--muted);margin-top:2px}
+.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#fff;flex:none}
+.stepper button{width:36px;height:40px;border:0;background:var(--surface-2);font-size:18px;font-weight:600;color:var(--ink-2)}
+.stepper button:hover{background:var(--brand-50);color:var(--brand-700)}
+.stepper input{width:58px;height:40px;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);text-align:center;font-weight:700;font-size:16px;outline:0;font-variant-numeric:tabular-nums}
+.stepper:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-50)}
+.notesbox{padding:13px 18px 14px}
+.notesbox label{font-weight:650;display:block;margin-bottom:6px}
+.notesbox textarea{width:100%;min-height:58px;resize:vertical;border:1px solid var(--line);border-radius:9px;padding:8px 11px;outline:0;line-height:1.45;display:block}
+.notesbox textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-50)}
+.notesbox textarea::placeholder{color:var(--faint)}
+.hints{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:12px;padding:0 4px;color:var(--muted);font-size:12px}
+.hints span{display:inline-flex;align-items:center;gap:4px}
+
+/* ---------- Aanvullen ---------- */
+.ac{position:fixed;z-index:60;background:#fff;border:1px solid var(--line);border-radius:11px;box-shadow:var(--shadow-lg);padding:5px;max-height:340px;overflow:auto;min-width:270px}
+.ac-head{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;padding:6px 9px 4px}
+.ac-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 9px;border-radius:7px;cursor:pointer;font-size:13.5px}
+.ac-item:hover{background:var(--surface-2)}
+.ac-item.active{background:var(--brand-50);color:var(--brand-700)}
+.ac-item mark{background:none;color:inherit;font-weight:750;text-decoration:underline;text-decoration-color:var(--brand-100);text-decoration-thickness:3px;text-underline-offset:2px}
+.ac-item .meta{font-size:11px;color:var(--muted);white-space:nowrap}
+.ac-add{color:var(--brand-700);font-weight:600;justify-content:flex-start;gap:7px}
+.ac-add .i{width:15px;height:15px}
+.ac-foot{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted);padding:7px 9px 3px;border-top:1px solid var(--line-2);margin-top:4px}
+
+/* ---------- Zijpanelen ---------- */
+.scrim{position:fixed;inset:0;background:rgba(14,26,21,.3);z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
+.scrim.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,100vw);background:#fff;z-index:50;box-shadow:var(--shadow-lg);transform:translateX(104%);visibility:hidden;transition:transform .24s cubic-bezier(.2,.8,.2,1),visibility 0s linear .24s;display:flex;flex-direction:column}
+.drawer:not(.open){pointer-events:none}
+.drawer.open{transform:none;visibility:visible;transition:transform .24s cubic-bezier(.2,.8,.2,1),visibility 0s}
+.dr-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:20px 20px 14px}
+.dr-title{font-size:18px;font-weight:700;letter-spacing:-.015em}
+.dr-sub{font-size:12.5px;color:var(--muted);margin-top:2px}
+.dr-search{margin:0 20px 10px;display:flex;align-items:center;gap:8px;height:42px;border:1px solid var(--line);border-radius:10px;padding:0 12px;background:var(--surface-2);color:var(--muted)}
+.dr-search:focus-within{border-color:var(--brand);background:#fff;box-shadow:0 0 0 3px var(--brand-50)}
+.dr-search input{flex:1;border:0;outline:0;background:transparent;height:100%;min-width:0;color:var(--ink)}
+.dr-body{flex:1;overflow:auto;padding:2px 12px 16px}
+.dr-foot{padding:13px 20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.5;background:var(--surface-2)}
+.mini{width:30px;height:30px;border:0;background:none;border-radius:8px;display:inline-grid;place-items:center;color:var(--muted);flex:none}
+.mini .i{width:16px;height:16px}
+.mini:hover{background:var(--surface-2);color:var(--ink)}
+.mini.danger:hover{color:var(--danger);background:var(--danger-50)}
+.dr-head .mini{width:34px;height:34px;background:var(--surface-2)}
+.sitem{display:flex;align-items:center;gap:8px;padding:5px 6px 5px 10px;border-radius:9px;min-height:40px}
+.sitem:hover{background:var(--surface-2)}
+.sitem .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:550}
+.sitem .cnt{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.sitem .acts{display:flex;gap:2px;opacity:0}
+.sitem:hover .acts,.sitem:focus-within .acts{opacity:1}
+.sitem input{flex:1;height:32px;border:1px solid var(--brand);border-radius:7px;padding:0 9px;outline:0;box-shadow:0 0 0 3px var(--brand-50);min-width:0}
+.sitem mark,.prow mark{background:#fff1b8;color:inherit;border-radius:2px}
+.addline{display:flex;align-items:center;gap:8px;width:100%;border:1px dashed var(--brand-100);background:var(--brand-50);color:var(--brand-700);font-weight:600;border-radius:9px;padding:10px 12px;margin:2px 0 8px;text-align:left}
+.addline:hover{border-color:var(--brand)}
+.pgroup{margin:4px 0 16px}
+.pgroup h3{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-700);margin:0 8px 7px}
+.pcard{border:1px solid var(--line);border-radius:11px;overflow:hidden}
+.pset+.pset{border-top:5px solid var(--surface-2)}
+.prow{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;font-size:14px}
+.prow+.prow{border-top:1px solid var(--line-2)}
+.prow .tel{font-weight:750;font-variant-numeric:tabular-nums;font-size:15px;letter-spacing:.03em}
+
+/* ---------- Toast ---------- */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,14px);background:#13221c;color:#fff;border-radius:11px;padding:9px 9px 9px 16px;display:flex;align-items:center;gap:14px;font-size:13px;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:70;max-width:calc(100vw - 32px);min-height:44px}
+.toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast button{display:inline-flex;align-items:center;gap:6px;border:0;background:rgba(255,255,255,.14);color:#fff;font-weight:700;border-radius:7px;height:30px;padding:0 11px;white-space:nowrap}
+.toast button:hover{background:rgba(255,255,255,.24)}
+.toast .i{width:15px;height:15px}
+
+/* ---------- Responsief ---------- */
+@media (max-width:1150px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){
+  .topbar-in{padding:0 16px;gap:12px}
+  .brand-div,.brand-title,.savestate span:last-child,.toolbtn .lbl{display:none}
+  .wrap{padding:16px 16px 64px}
+  .sheetfoot{grid-template-columns:1fr}
+  .floorbox{border-right:0;border-bottom:1px solid var(--line)}
+  .hints{display:none}
+}
+@media (max-width:560px){
+  .logo{width:72px}
+  .dayline h1{font-size:21px}
+  .dayactions{width:100%}
+  .byfield{flex:1;min-width:0}
+  .byfield input{width:100%;min-width:0}
+  .btn .lbl{display:none}
+  .kpi-value,.kpi-total .kpi-value{font-size:24px}
+  .kpis{gap:8px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* =====================================================================
+   AFDRUKBLAD — een apart document, alleen zichtbaar bij afdrukken
+   ===================================================================== */
+#printSheet{display:none}
 @media print{
- @page{size:landscape;margin:12mm}
- *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
- body{background:#fff!important;color:#1d2b3b}
- .topbar{height:auto;padding:0 0 10px;border-bottom:2px solid #dce4eb;margin-bottom:12px}
- .brandlogo{max-width:105px;max-height:54px;object-fit:contain}
- .brandname{font-size:15px;letter-spacing:.5px}
- .wrap{padding:0;max-width:none}
- .heading{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px;padding:10px 14px;background:#f0f4f7;border-radius:8px}
- .heading h1{font-size:24px;margin:0;color:#173b35}
- .datepill{border:0;background:#fff;padding:8px 12px;font-weight:700;color:#34495e}
- .stats{grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:12px}
- .stat{border:1px solid #dce4e9;border-radius:8px;box-shadow:none;padding:10px 13px}
- .stat .label{font-size:10px;text-transform:uppercase;letter-spacing:.5px}
- .stat .value{font-size:22px;margin-top:4px}
- .content{border:1px solid #cbd6df;border-radius:8px;box-shadow:none;overflow:visible}
- .sectionhead{padding:10px 14px;background:#f7f9fb}
- .sectiontitle{font-size:14px}
- .tablewrap{overflow:visible}table{min-width:0;border-collapse:separate;border-spacing:0;width:100%}
- th{padding:9px 7px;font-size:9px;background:#edf1f5!important;color:#405266;border-bottom:1px solid #cbd6df}
- th.ambient-head{background:#dceee0!important;color:#285d3a!important;border-bottom:2px solid #77a984!important}
- th.cool-head{background:#dce9f8!important;color:#24558a!important;border-bottom:2px solid #79a5d3!important}
- td{padding:7px 6px;font-size:10px;border-bottom:1px solid #e3e9ee}
- td.ambient-col{background:#f1f8f2!important}td.cool-col{background:#eff5fc!important}
- .supplierinput,.num{font-size:10px;border:0!important;background:transparent!important;box-shadow:none!important;padding:0;min-width:0}
- .supplierinput{font-weight:650;color:#263c52}
- .totalrow td{background:#e9eef2!important;font-weight:800;border-top:2px solid #cbd6df}
- .floor{padding:10px 14px;background:#fafbfc}
- .floorlabel{font-size:11px}.floorinput .num{font-size:11px}
- .printnote{display:block!important;margin:10px 0 0;text-align:right;color:#718096;font-size:9px}
- .actions,.floatwrap,.printcta,.footerline,.floorhint{display:none!important}
+  @page{size:A4 landscape;margin:10mm 12mm}
+  html,body{background:#fff!important}
+  body>*:not(#printSheet){display:none!important}
+  #printSheet{display:block}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
 }
-</style></head>
-<body>
-<header class="topbar"><div class="brand"><img class="brandlogo" src="https://www.febelco.be/media/1060/febelco-logo-400x300.png" alt="Febelco logo"><div class="brandname">PALLETAANMELDINGEN</div></div></header>
-<main class="wrap">
- <div class="heading"><div><h1>Palletaanmeldingen</h1></div><div class="datepill" id="today"></div></div>
- <section class="stats">
-  <div class="stat"><div class="label">Totaal palletten</div><div class="value" id="totalPallets">0</div></div>
-  <div class="stat"><div class="label">Ambient palletten</div><div class="value" id="ambientTotal">0</div></div>
-  <div class="stat"><div class="label">Cool palletten</div><div class="value" id="coolTotal">0</div></div>
-  <div class="stat"><div class="label">Totale mixtijd</div><div class="value" id="mixTotal">0<span class="unit">min</span></div></div>
- </section>
- <section class="content">
-  <div class="sectionhead"><div><div class="sectiontitle">Ontvangen palletten</div></div><div class="actions"><button class="btn" id="clearBtn">Alles wissen</button><button class="btn primary" id="printBtn">Afdrukken</button></div></div>
-  <div class="tablewrap"><table><thead><tr><th rowspan="2">Leverancier</th><th class="grouphead ambient-head" colspan="3">Ambient</th><th class="grouphead cool-head" colspan="3">Cool</th></tr><tr><th>Palletten</th><th>Mix palletten</th><th>Mixtijd (min)</th><th>Palletten</th><th>Mix palletten</th><th>Mixtijd (min)</th></tr></thead><tbody id="rows"></tbody><tfoot><tr class="totalrow"><td>TOTAAL</td><td class="ambient-col" id="aP">0</td><td class="ambient-col" id="aM">0</td><td class="ambient-col" id="aT">0 min</td><td class="cool-col" id="cP">0</td><td class="cool-col" id="cM">0</td><td class="cool-col" id="cT">0 min</td></tr></tfoot></table></div>
-  <div class="floor"><div><div class="floorlabel">Losse colli palletten op de vloer</div><div class="floorhint">Aantal extra palletten die niet aan een leverancier gekoppeld zijn.</div></div><div class="floorinput"><input class="num" id="floor" type="number" min="0" step="1" value="0" aria-label="Losse colli palletten vloer"><span style="font-size:12px;color:#718096">palletten</span></div></div>
-  
- </section>
+.ps{font:10pt/1.35 var(--font);color:#111a16;--rowpad:1.8mm;--rowfont:10.5pt}
+.ps.roomy{--rowpad:2.4mm}
+.ps.compact{--rowpad:1.1mm}
+.ps.dense{--rowpad:.6mm;--rowfont:9.5pt}
+.ps.tiny{--rowpad:.35mm;--rowfont:9pt}
+.ps.micro{--rowpad:.2mm;--rowfont:8.5pt}
+.ps.micro .ps-table td{line-height:1.2}
 
- <p class="printnote">Palletaanmeldingen Izegem · Febelco</p>
+/* kop */
+.ps-head{position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:8mm;padding-bottom:3.2mm;border-bottom:.6mm solid #111a16;margin-bottom:5mm}
+.ps-head::after{content:"";position:absolute;left:0;bottom:-.6mm;width:52mm;height:.6mm;background:var(--brand)}
+.ps-brand{display:flex;align-items:center;gap:4mm}
+.ps-brand img{height:13mm;width:auto;display:block}
+.ps-brand .logo-fallback{font-size:16pt}
+.ps-title{font-size:19pt;font-weight:800;letter-spacing:-.025em;line-height:1.05}
+.ps-sub{font-size:8pt;color:var(--brand-700);letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-top:1.2mm}
+.ps-meta{display:flex;align-items:flex-end}
+.ps-mi{padding-left:6mm;margin-left:6mm;border-left:.3mm solid #cdd5d1}
+.ps-mi:first-child{padding-left:0;margin-left:0;border-left:0}
+.ps-lab{display:block;font-size:7pt;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#5a6762;margin-bottom:1mm}
+.ps-day,.ps-by{font-size:15pt;font-weight:800;letter-spacing:-.015em;line-height:1.15;white-space:nowrap}
+.ps-by.blank{display:block;min-width:52mm;height:6.6mm;border-bottom:.3mm solid #111a16}
+
+/* samenvatting */
+.ps-sum{display:grid;grid-template-columns:1.2fr 1fr 1fr .9fr 1.25fr;gap:3mm;margin-bottom:5mm}
+.ps-box{border:.3mm solid #cdd5d1;border-radius:2.4mm;padding:2.4mm 3.4mm 2.6mm;background:#fff}
+.ps-box .l{display:block;font-size:7pt;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#4b5853}
+.ps-box .v{display:block;font-size:20pt;font-weight:800;line-height:1.1;margin-top:.9mm;letter-spacing:-.025em}
+.ps-box .s{display:block;font-size:8pt;color:#5f6b66;margin-top:.4mm}
+.ps-main{background:#e9f5ef;border-color:#a9d6c2}
+.ps-main .l{color:var(--brand-700)}
+.ps-main .v{color:#06402f;font-size:23pt}
+.ps-amb{background:var(--amb-mix);border-color:#f2d6c6;border-top:1.4mm solid var(--amb)}
+.ps-amb .l{color:var(--amb-ink)}
+.ps-cool{background:var(--cool-mix);border-color:#d3e2f5;border-top:1.4mm solid var(--cool)}
+.ps-cool .l{color:var(--cool-ink)}
+
+/* tabel */
+.ps-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;table-layout:fixed}
+.ps-table thead{display:table-header-group}
+.ps-table tfoot{display:table-row-group}
+.ps-table tr{break-inside:avoid}
+.ps-table th{font-size:7.5pt;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:#3f4b46;padding:1.3mm 1.5mm;text-align:center;vertical-align:bottom}
+.ps-table thead tr:last-child th,.ps-table th[rowspan="3"],.ps-table th.pal{border-bottom:.6mm solid #111a16}
+.ps-table th.g{font-size:9.5pt;letter-spacing:.12em;padding:1.7mm 1.5mm}
+.ps-table th.g small{font-weight:600;letter-spacing:0;text-transform:none;opacity:.75;font-size:8pt;margin-left:1.5mm}
+.ps-table th.g.amb{background:var(--amb-head);color:var(--amb-ink);border-top:1mm solid var(--amb)}
+.ps-table th.g.cool{background:var(--cool-head);color:var(--cool-ink);border-top:1mm solid var(--cool)}
+.ps-table th.mixhead{padding-bottom:.6mm}
+.ps-table th.mixhead span{display:block;border-bottom:.4mm solid currentColor;padding-bottom:.6mm;margin:0 2mm}
+.ps-table th.sub{text-transform:none;letter-spacing:0;font-size:8pt;font-weight:700}
+.ps-table th.left,.ps-table td.left{text-align:left}
+.ps-table .amb.pal{background:var(--amb-pal)}
+.ps-table .amb.mix{background:var(--amb-mix)}
+.ps-table .cool.pal{background:var(--cool-pal)}
+.ps-table .cool.mix{background:var(--cool-mix)}
+.ps-table th.amb{color:var(--amb-ink)}.ps-table th.amb.mix{color:var(--amb-mixink)}
+.ps-table th.cool{color:var(--cool-ink)}.ps-table th.cool.mix{color:var(--cool-mixink)}
+.ps-table .gs{border-left:.5mm solid #8e9b95}
+.ps-table .amb.ml{border-left:.25mm solid var(--amb-pal-line)}
+.ps-table .cool.ml{border-left:.25mm solid var(--cool-pal-line)}
+.ps-table td{padding:var(--rowpad) 1.6mm;border-bottom:.2mm solid #dce3df;text-align:center;font-size:var(--rowfont)}
+.ps-table td.nr{color:#8a9691;font-size:8.5pt}
+.ps-table td.name{font-weight:650}
+.ps-table td.pal{font-weight:800}
+.ps-table td.mix{font-weight:600;color:#2f3a35}
+.ps-table td .u{font-size:7.5pt;color:#6b7772;font-weight:600;margin-left:.6mm}
+.ps-table .tot{border-left:.5mm solid #111a16;font-weight:800;background:#f1f4f2}
+.ps-table tbody tr:nth-child(even) td.name,.ps-table tbody tr:nth-child(even) td.nr{background:#f6f8f7}
+.ps-table .z{color:#bcc5c1;font-weight:500}
+.ps-table tr.floor td{border-top:.3mm dashed #aab5b0}
+.ps-table tr.floor td.left{font-style:italic;color:#38443f;background:#fff}
+.ps-table tr.floor td.nr{background:#fff}
+.ps-table tr.sum td{border-top:.7mm solid #111a16;border-bottom:.7mm solid #111a16;font-weight:800;font-size:11.5pt;padding:2.2mm 1.6mm}
+.ps-table tr.sum td.name{font-size:9pt;letter-spacing:.12em;text-transform:uppercase}
+.ps-table tr.sum td.amb.pal{background:var(--amb-head)}
+.ps-table tr.sum td.cool.pal{background:var(--cool-head)}
+.ps-table tr.sum td.amb.mix{background:var(--amb-pal)}
+.ps-table tr.sum td.cool.mix{background:var(--cool-pal)}
+.ps-table tr.sum td.tot{background:#111a16;color:#fff;font-size:14pt;border-left-color:#111a16}
+.ps-table td.empty{padding:8mm;color:#6b7772;font-style:italic}
+
+/* opmerkingen & voet */
+.ps-notes{margin-top:5mm;border:.3mm solid #cdd5d1;border-radius:2.4mm;padding:2.4mm 3.4mm 2.8mm;break-inside:avoid}
+.ps-notetext{white-space:pre-wrap;font-size:10pt;line-height:1.45}
+.ps-lines i{display:block;height:6.5mm;border-bottom:.2mm solid #d5ddd9}
+.ps-foot{display:flex;justify-content:space-between;margin-top:4mm;padding-top:2mm;border-top:.2mm solid #dce3df;font-size:7.5pt;color:#7d8984}
+
+/* compacte varianten voor drukke dagen */
+.ps:is(.tiny,.micro) .ps-head{padding-bottom:2mm;margin-bottom:3.5mm}
+.ps:is(.tiny,.micro) .ps-brand img{height:10mm}
+.ps:is(.tiny,.micro) .ps-title{font-size:15pt}
+.ps:is(.tiny,.micro) :is(.ps-day,.ps-by){font-size:12.5pt}
+.ps:is(.tiny,.micro) .ps-sum{margin-bottom:3.5mm;gap:2mm}
+.ps:is(.tiny,.micro) .ps-box{padding:1.4mm 2.6mm}
+.ps.tiny .ps-box .v{font-size:14pt}
+.ps.micro .ps-box{display:flex;align-items:baseline;gap:2mm;flex-wrap:wrap}
+.ps.micro .ps-box .v{font-size:12.5pt;margin:0}
+.ps.micro .ps-box .s{display:none}
+.ps:is(.tiny,.micro) .ps-table th{padding:.8mm 1.2mm}
+.ps:is(.tiny,.micro) tr.sum td{padding:1.3mm 1.6mm}
+.ps:is(.tiny,.micro) .ps-notes{margin-top:3mm;padding:1.6mm 3mm 2mm}
+.ps:is(.tiny,.micro) .ps-lines i{height:4.8mm}
+.ps.micro .ps-lines i:nth-child(n+2){display:none}
+.ps:is(.tiny,.micro) .ps-foot{margin-top:2.5mm;padding-top:1.5mm}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M4 6.5l16 11M20 6.5l-16 11"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <img class="logo" src="https://www.febelco.be/media/1060/febelco-logo-400x300.png" alt="Febelco" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fallback',textContent:'febelco'}))">
+      <span class="brand-div" aria-hidden="true"></span>
+      <div class="brand-title">Palletaanmeldingen<small>Izegem</small></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="topactions">
+      <span class="savestate" id="saveState" aria-live="polite"><span class="dot"></span><span id="saveText">Opgeslagen</span></span>
+      <button class="toolbtn" id="openSuppliers" title="Leveranciers beheren"><svg class="i"><use href="#i-truck"/></svg><span class="lbl">Leveranciers</span></button>
+      <button class="toolbtn" id="openPhones" title="Interne telefoonnummers"><svg class="i"><use href="#i-phone"/></svg><span class="lbl">Telefoon</span></button>
+    </div>
+  </div>
+</header>
+<div class="storagewarn" id="storageWarn" hidden>Let op: deze browser laat niet toe dat gegevens bewaard worden. Wat je invult gaat verloren bij het sluiten. Open het bestand in Chrome of Edge.</div>
+
+<main class="wrap">
+  <div class="dayhead">
+    <div>
+      <div class="eyebrow">Dagblad</div>
+      <div class="dayline"><h1 id="dayLabel"></h1><span class="badge" id="todayBadge">Vandaag</span></div>
+    </div>
+    <div class="dayactions">
+      <label class="byfield"><span>Ingevuld door</span><input id="filledBy" list="byList" maxlength="60" placeholder="Naam" autocomplete="off"></label>
+      <datalist id="byList"></datalist>
+      <button class="btn btn-danger" id="clearDay" title="Het blad leegmaken voor een nieuwe dag"><svg class="i"><use href="#i-trash"/></svg><span class="lbl">Alles wissen</span></button>
+      <button class="btn btn-primary" id="printBtn" title="Afdrukken (Ctrl+P)"><svg class="i"><use href="#i-print"/></svg>Afdrukken</button>
+    </div>
+  </div>
+
+  <div class="notice" id="staleNotice" hidden>
+    <svg class="i"><use href="#i-info"/></svg>
+    <span id="staleText"></span>
+    <span class="acts"><button class="btn btn-sm" id="stalePrint">Afdrukken</button><button class="btn btn-sm" id="staleClear">Leegmaken</button></span>
+  </div>
+
+  <section class="kpis" aria-label="Totalen van de dag">
+    <div class="kpi kpi-total">
+      <div class="kpi-label">Totaal palletten</div>
+      <div class="kpi-value" id="kTotal">0</div>
+      <div class="splitbar" id="kSplit" role="img"></div>
+      <div class="kpi-sub" id="kTotalSub"></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label"><span class="sw s-amb"></span>Ambient</div>
+      <div class="kpi-value" id="kAmb">0</div>
+      <div class="kpi-sub" id="kAmbSub"></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label"><span class="sw s-cool"></span>Cool</div>
+      <div class="kpi-value" id="kCool">0</div>
+      <div class="kpi-sub" id="kCoolSub"></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label"><svg class="i"><use href="#i-clock"/></svg>Totale mixtijd</div>
+      <div class="kpi-value" id="kMix">0</div>
+      <div class="kpi-sub" id="kMixSub"></div>
+    </div>
+  </section>
+
+  <section class="card sheet">
+    <div class="sheethead">
+      <div><div class="cardtitle">Ontvangen palletten</div><div class="sheetmeta" id="sheetMeta"></div></div>
+    </div>
+    <div class="tablewrap">
+      <table class="grid">
+        <thead>
+          <tr>
+            <th rowspan="3" class="c-idx">#</th>
+            <th rowspan="3" class="c-sup">Leverancier</th>
+            <th colspan="3" class="gh gh-amb gstart"><span class="gh-in"><svg class="i"><use href="#i-thermo"/></svg>Ambient <span class="temp">15–25 °C</span></span></th>
+            <th colspan="3" class="gh gh-cool gstart"><span class="gh-in"><svg class="i"><use href="#i-snow"/></svg>Cool <span class="temp">2–8 °C</span></span></th>
+            <th rowspan="3" class="c-tot">Totaal</th>
+            <th rowspan="3" class="c-del"><span class="sr">Verwijderen</span></th>
+          </tr>
+          <tr>
+            <th rowspan="2" class="amb pal gstart">Palletten</th>
+            <th colspan="2" class="amb mix ml mixhead"><span>Mix</span></th>
+            <th rowspan="2" class="cool pal gstart">Palletten</th>
+            <th colspan="2" class="cool mix ml mixhead"><span>Mix</span></th>
+          </tr>
+          <tr>
+            <th class="amb mix ml mixsub">Palletten</th><th class="amb mix mixsub">Tijd</th>
+            <th class="cool mix ml mixsub">Palletten</th><th class="cool mix mixsub">Tijd</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+        <tfoot>
+          <tr>
+            <td class="c-idx"></td><td class="c-sup">Totaal</td>
+            <td class="amb pal gstart" id="f-ap">0</td><td class="amb mix ml" id="f-am">0</td><td class="amb mix" id="f-at">0 min</td>
+            <td class="cool pal gstart" id="f-cp">0</td><td class="cool mix ml" id="f-cm">0</td><td class="cool mix" id="f-ct">0 min</td>
+            <td class="c-tot" id="f-tot">0</td><td class="c-del"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="sheetfoot">
+      <div class="floorbox">
+        <div><div class="fl-title">Losse colli op de vloer</div><div class="fl-hint">Extra palletten die niet aan een leverancier gekoppeld zijn</div></div>
+        <div class="stepper">
+          <button type="button" id="floorMinus" tabindex="-1" aria-label="Eén pallet minder">−</button>
+          <input id="floor" inputmode="numeric" autocomplete="off" maxlength="4" value="0" aria-label="Losse colli palletten op de vloer">
+          <button type="button" id="floorPlus" tabindex="-1" aria-label="Eén pallet meer">+</button>
+        </div>
+      </div>
+      <div class="notesbox">
+        <label for="notes">Opmerkingen</label>
+        <textarea id="notes" rows="2" maxlength="2000" placeholder="Bv. beschadigde pallet, late levering, temperatuurafwijking…"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <div class="hints" aria-hidden="true">
+    <span><kbd>Enter</kbd> volgende regel</span>
+    <span><kbd>Tab</kbd> suggestie overnemen &amp; verder</span>
+    <span><kbd>↑</kbd><kbd>↓</kbd> regel hoger / lager</span>
+    <span><kbd>Esc</kbd> suggesties sluiten</span>
+    <span><kbd>Ctrl</kbd>+<kbd>P</kbd> afdrukken</span>
+  </div>
 </main>
-<div class="floatwrap">
-<div class="phonepop" id="phonePop"><div class="pophead"><strong>Telefoonnummers</strong><button class="close" id="closePhonePop" aria-label="Sluiten">×</button></div>
-<div class="phonegroup"><h3>Infodienst</h3>
-<div class="phonecontact"><span>Sofie</span><strong>2494</strong></div><div class="phonecontact"><span>Lotte</span><strong>2486</strong></div><div class="phonecontact"><span>Inne</span><strong>2496</strong></div><div class="phonecontact"><span>Dorina</span><strong>2490</strong></div><div class="phonecontact"><span>Gûl</span><strong>8289</strong></div></div>
-<div class="phonegroup"><h3>Izegem</h3>
-<div class="phonecontact"><span>Marieke</span><strong>7785</strong></div><div class="phonecontact"><span>Kimberly</span><strong>7747</strong></div>
-<div class="phone-divider"></div>
-<div class="phonecontact"><span>Frederic</span><strong>7771</strong></div><div class="phonecontact"><span>Marnix</span><strong>7772</strong></div><div class="phonecontact"><span>Natascha</span><strong>7773</strong></div>
-<div class="phone-divider"></div>
-<div class="phonecontact"><span>Kurt</span><strong>7799</strong></div><div class="phonecontact"><span>Nancy</span><strong>7794</strong></div><div class="phonecontact"><span>Els</span><strong>7760</strong></div>
-<div class="phone-divider"></div>
-<div class="phonecontact"><span>Vanessa</span><strong>7795</strong></div>
-<div class="phone-divider"></div>
-<div class="phonecontact"><span>Ellen</span><strong>7756</strong></div><div class="phonecontact"><span>Petra</span><strong>7750</strong></div><div class="phonecontact"><span>Binnendienst</span><strong>7755</strong></div>
-<div class="phone-divider"></div>
-<div class="phonecontact"><span>Wouter V</span><strong>7748</strong></div>
-<div class="phone-divider"></div>
-<div class="phonecontact"><span>Wouter F</span><strong>7765</strong></div>
-<div class="phone-divider"></div>
-<div class="phonecontact"><span>Bart / Inge</span><strong>7743</strong></div>
-</div></div>
-<button class="phonebtn" id="phoneBtn" title="Telefoonnummers" aria-label="Telefoonnummers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg></button>
-<div class="supplierpop" id="supplierPop"><div class="pophead"><strong>Leveranciers beheren</strong><button class="close" id="closePop">×</button></div><div class="note">Dit is de volledige keuzelijst. De namen zijn alleen suggesties: ze verschijnen niet automatisch op je dagblad. Je typt enkel de leveranciers in die vandaag effectief langskomen.</div><div class="supplierlist" id="supplierList"></div><div class="addrow"><input id="newSupplier" placeholder="Bewaar een leveranciersnaam" maxlength="60"><button class="btn primary" id="addSupplier">Bewaren</button></div><div class="note">Je kunt hier ook zelf een leverancier toevoegen. Gebruik Enter in de tabel om een nieuwe lege regel te openen.</div></div><button class="truckbtn" id="truckBtn" title="Leveranciers beheren" aria-label="Leveranciers beheren">🚚</button></div>
-<div class="toast" id="toast"></div>
+
+<div class="scrim" id="scrim"></div>
+
+<aside class="drawer" id="drawerSuppliers" role="dialog" aria-modal="true" aria-labelledby="dsTitle" aria-hidden="true">
+  <div class="dr-head">
+    <div><div class="dr-title" id="dsTitle">Leveranciers</div><div class="dr-sub" id="dsSub"></div></div>
+    <button class="mini" data-close aria-label="Sluiten"><svg class="i"><use href="#i-x"/></svg></button>
+  </div>
+  <label class="dr-search"><svg class="i"><use href="#i-search"/></svg><input id="supSearch" placeholder="Zoeken of nieuwe naam toevoegen…" maxlength="60" autocomplete="off" aria-label="Leverancier zoeken of toevoegen"></label>
+  <div class="dr-body" id="supList"></div>
+  <div class="dr-foot">Dit is de keuzelijst voor het aanvullen tijdens het typen. Namen verschijnen niet vanzelf op het dagblad.</div>
+</aside>
+
+<aside class="drawer" id="drawerPhones" role="dialog" aria-modal="true" aria-labelledby="dpTitle" aria-hidden="true">
+  <div class="dr-head">
+    <div><div class="dr-title" id="dpTitle">Telefoonnummers</div><div class="dr-sub">Interne nummers</div></div>
+    <button class="mini" data-close aria-label="Sluiten"><svg class="i"><use href="#i-x"/></svg></button>
+  </div>
+  <label class="dr-search"><svg class="i"><use href="#i-search"/></svg><input id="phoneSearch" placeholder="Zoek op naam of nummer…" autocomplete="off" aria-label="Telefoonnummer zoeken"></label>
+  <div class="dr-body" id="phoneList"></div>
+</aside>
+
+<div class="ac" id="ac" role="listbox" aria-label="Suggesties" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toastMsg"></span><button id="toastUndo" hidden><svg class="i"><use href="#i-undo"/></svg>Ongedaan maken</button></div>
+
+<!-- Het afdrukblad wordt opgebouwd vlak voor het afdrukken -->
+<div id="printSheet" class="ps" aria-hidden="true">
+  <header class="ps-head">
+    <div class="ps-brand">
+      <img src="https://www.febelco.be/media/1060/febelco-logo-400x300.png" alt="Febelco" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fallback',textContent:'febelco'}))">
+      <div><div class="ps-title">Palletaanmeldingen</div><div class="ps-sub">Febelco · Izegem</div></div>
+    </div>
+    <div class="ps-meta">
+      <div class="ps-mi"><span class="ps-lab">Datum</span><span class="ps-day" id="psDay"></span></div>
+      <div class="ps-mi"><span class="ps-lab">Ingevuld door</span><span class="ps-by" id="psBy"></span></div>
+    </div>
+  </header>
+  <div id="psBody"></div>
+</div>
+
 <script>
-const initialSuppliers=[
-'Eurotranspharma / Movianto','BPS / Nacex','Livlina','PostNL','Bota','Alloga','Aurobindo','DHL','UPS','FedeX','Bpost','Intern Transport Febelco','Eigen Klant','Onbekend','Intern SAK','Estafette','VTS','Uriage Destribution','Raes','Van Rooijen Logistiek NV','Hartmann','Colgate','Medista','PostNL EG','Nestlé','Mainfreight','Covetrus','Dematra'
+(() => {
+'use strict';
+
+/* =====================================================================
+   Instellingen
+   ===================================================================== */
+const STORE_KEY = 'febelco-pallet-izegem-v3';   // zelfde opslag als de vorige versie
+const OLD_KEY = 'febelco-pallet-izegem-v2';
+const NUM_KEYS = ['ap', 'am', 'at', 'cp', 'cm', 'ct'];
+const COLS = [
+  { k: 'ap', label: 'Ambient palletten',          cls: 'amb pal gstart' },
+  { k: 'am', label: 'Ambient mix palletten',      cls: 'amb mix ml' },
+  { k: 'at', label: 'Ambient mixtijd in minuten', cls: 'amb mix mr', min: true },
+  { k: 'cp', label: 'Cool palletten',             cls: 'cool pal gstart' },
+  { k: 'cm', label: 'Cool mix palletten',         cls: 'cool mix ml' },
+  { k: 'ct', label: 'Cool mixtijd in minuten',    cls: 'cool mix mr', min: true },
 ];
-const key='febelco-pallet-izegem-v3';
-let state=load();
-function blankRow(){return {name:'',ap:0,am:0,at:0,cp:0,cm:0,ct:0}}
-function load(){
- try{
-  let x=JSON.parse(localStorage.getItem(key));
-  if(!x){const old=JSON.parse(localStorage.getItem('febelco-pallet-izegem-v2'));if(old&&Array.isArray(old.rows))x=old;}
-  if(x&&Array.isArray(x.rows))return {suppliers:Array.isArray(x.suppliers)&&x.suppliers.length?x.suppliers:initialSuppliers.slice(),rows:x.rows,floor:num(x.floor)};
- }catch(e){}
- return {suppliers:initialSuppliers.slice(),rows:[blankRow()],floor:0}
+const DEFAULT_SUPPLIERS = [
+  'Eurotranspharma / Movianto','BPS / Nacex','Livlina','PostNL','Bota','Alloga','Aurobindo','DHL','UPS','FedeX','Bpost',
+  'Intern Transport Febelco','Eigen Klant','Onbekend','Intern SAK','Estafette','VTS','Uriage Destribution','Raes',
+  'Van Rooijen Logistiek NV','Hartmann','Colgate','Medista','PostNL EG','Nestlé','Mainfreight','Covetrus','Dematra'
+];
+// Telefoonlijst: elke binnenste lijst is een blok (zoals de scheidingslijnen in de vorige versie).
+const PHONEBOOK = [
+  { name: 'Infodienst', sets: [
+    [['Sofie','2494'],['Lotte','2486'],['Inne','2496'],['Dorina','2490'],['Gûl','8289']],
+  ]},
+  { name: 'Izegem', sets: [
+    [['Marieke','7785'],['Kimberly','7747']],
+    [['Frederic','7771'],['Marnix','7772'],['Natascha','7773']],
+    [['Kurt','7799'],['Nancy','7794'],['Els','7760']],
+    [['Vanessa','7795']],
+    [['Ellen','7756'],['Petra','7750'],['Binnendienst','7755']],
+    [['Wouter V','7748']],
+    [['Wouter F','7765']],
+    [['Bart / Inge','7743']],
+  ]},
+];
+
+/* =====================================================================
+   Hulpfuncties
+   ===================================================================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const int = v => { const n = Math.floor(Number(v)); return Number.isFinite(n) && n > 0 ? Math.min(n, 99999) : 0; };
+const str = (v, max) => String(v ?? '').slice(0, max);
+const stripMarks = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '');
+const norm = s => stripMarks(s).toLowerCase().replace(/\s+/g, ' ').trim();
+const pad = n => String(n).padStart(2, '0');
+const keyOf = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const dateOf = k => { const [y, m, d] = k.split('-').map(Number); return new Date(y, m - 1, d); };
+const todayKey = () => keyOf(new Date());
+const isKey = k => typeof k === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(k);
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+const fmtLong = k => cap(dateOf(k).toLocaleDateString('nl-BE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }));
+const fmtMin = m => { m = int(m); if (!m) return '0 min'; const h = Math.floor(m / 60), r = m % 60; return h ? `${h} u${r ? ' ' + r + ' min' : ''}` : `${r} min`; };
+const fmtMinHTML = m => { m = int(m); const h = Math.floor(m / 60), r = m % 60; return h ? `${h}<span class="u">u</span>${r ? `${r}<span class="u">min</span>` : ''}` : `${r}<span class="u">min</span>`; };
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+const icon = id => `<svg class="i"><use href="#i-${id}"/></svg>`;
+
+const blankRow = () => ({ name: '', ap: 0, am: 0, at: 0, cp: 0, cm: 0, ct: 0 });
+const rowHasData = r => !!(r.name && r.name.trim()) || NUM_KEYS.some(k => int(r[k]) > 0);
+const rowTotal = r => int(r.ap) + int(r.am) + int(r.cp) + int(r.cm);
+const cleanRow = r => { const o = { name: str(r && r.name, 80) }; NUM_KEYS.forEach(k => o[k] = int(r && r[k])); return o; };
+const sheetBlank = d => !d.rows.some(rowHasData) && !int(d.floor) && !(d.notes || '').trim();
+const dedupe = list => { const seen = new Set(), out = []; for (const s of list) { const n = norm(s); if (n && !seen.has(n)) { seen.add(n); out.push(s); } } return out; };
+const cleanSuppliers = list => dedupe(list.map(s => String(s).trim().replace(/\s+/g, ' ').slice(0, 60)).filter(Boolean));
+
+/* =====================================================================
+   Opslag (één dagblad, compatibel met de vorige versie)
+   ===================================================================== */
+const emptyDB = () => ({ suppliers: DEFAULT_SUPPLIERS.slice(), rows: [], floor: 0, by: '', notes: '', started: null, usage: {}, byNames: [] });
+
+function normalizeDB(x) {
+  const d = emptyDB();
+  if (!x || typeof x !== 'object') return d;
+  if (Array.isArray(x.suppliers) && x.suppliers.length) d.suppliers = cleanSuppliers(x.suppliers);
+  d.rows = (Array.isArray(x.rows) ? x.rows : []).map(cleanRow);
+  d.floor = int(x.floor);
+  d.by = str(x.by, 60);
+  d.notes = str(x.notes, 2000);
+  d.started = isKey(x.started) ? x.started : null;
+  if (x.usage && typeof x.usage === 'object') for (const [k, v] of Object.entries(x.usage)) if (int(v)) d.usage[k] = int(v);
+  if (Array.isArray(x.byNames)) d.byNames = x.byNames.map(s => str(s, 60).trim()).filter(Boolean).slice(0, 12);
+  if (!d.started && !sheetBlank(d)) d.started = todayKey();
+  return d;
 }
-function save(){localStorage.setItem(key,JSON.stringify(state))}
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function num(v){return Math.max(0,Number(v)||0)}
-function ensureBlank(){if(!state.rows.length||state.rows[state.rows.length-1].name.trim()||Object.values(state.rows[state.rows.length-1]).some((v,i)=>i>0&&num(v)>0))state.rows.push(blankRow())}
-function render(){const body=document.getElementById('rows');body.innerHTML='';ensureBlank();state.rows.forEach((d,i)=>{const tr=document.createElement('tr');tr.innerHTML=`<td class="supplier"><input class="supplierinput" type="text" maxlength="80" placeholder="Naam leverancier..." value="${esc(d.name||'')}" data-row="${i}" list="supplierSuggestions" aria-label="Leverancier"></td>${[['ap','Ambient palletten','ambient-col'],['am','Ambient mix palletten','ambient-col'],['at','Ambient mixtijd','ambient-col'],['cp','Cool palletten','cool-col'],['cm','Cool mix palletten','cool-col'],['ct','Cool mixtijd','cool-col']].map(([k,label,cls])=>`<td class="${cls}"><input class="num ${k==='at'||k==='ct'?'min':''}" type="number" min="0" step="1" value="${d[k]||''}" placeholder="0" data-row="${i}" data-key="${k}" aria-label="${label}"></td>`).join('')}`;body.appendChild(tr)});
- body.querySelectorAll('.supplierinput').forEach(el=>el.addEventListener('input',e=>{state.rows[Number(e.target.dataset.row)].name=e.target.value;save();}));
- body.querySelectorAll('input[data-key]').forEach(el=>el.addEventListener('input',e=>{const r=state.rows[Number(e.target.dataset.row)],k=e.target.dataset.key;r[k]=num(e.target.value);updateTotals();save()}));
- // Enter brengt je altijd naar het leveranciersveld van de volgende regel.
- body.querySelectorAll('#rows input').forEach(el=>el.addEventListener('keydown',e=>{
-   if(e.key==='Enter'){
-     e.preventDefault();
-     const row=Number(e.target.dataset.row);
-     const nextRow=row+1;
-     if(nextRow>=state.rows.length){state.rows.push(blankRow());render();}
-     const next=document.querySelector(`#rows .supplierinput[data-row="${nextRow}"]`);
-     if(next){next.focus();}
-     save();return;
-   }
-   if(e.key!=='Tab')return;
-   const all=[...body.querySelectorAll('input')],idx=all.indexOf(e.target);
-   if(idx<0)return;
-   if(e.target.classList.contains('supplierinput')&&!e.shiftKey){
-     const typed=e.target.value.trim().toLocaleLowerCase('nl-BE');
-     if(typed){
-       const exact=state.suppliers.find(n=>n.toLocaleLowerCase('nl-BE')===typed);
-       const match=exact||state.suppliers.find(n=>n.toLocaleLowerCase('nl-BE').startsWith(typed))||state.suppliers.find(n=>n.toLocaleLowerCase('nl-BE').includes(typed));
-       if(match){e.target.value=match;state.rows[Number(e.target.dataset.row)].name=match;save();}
-     }
-   }
-   if(!e.shiftKey&&idx===all.length-1){
-     e.preventDefault();state.rows.push(blankRow());render();
-     document.querySelector(`.supplierinput[data-row="${state.rows.length-1}"]`)?.focus();save();
-   }else if(e.shiftKey&&idx===0){
-     e.preventDefault();document.querySelector('#floor')?.focus();
-   }
- }));
- document.getElementById('floor').value=state.floor||0;updateTotals();renderSupplierList();
+
+let storageOK = true;
+function loadDB() {
+  try { localStorage.setItem('__pallet_test__', '1'); localStorage.removeItem('__pallet_test__'); }
+  catch (e) { storageOK = false; return emptyDB(); }
+  try {
+    let x = JSON.parse(localStorage.getItem(STORE_KEY) || 'null');
+    if (!x) { const old = JSON.parse(localStorage.getItem(OLD_KEY) || 'null'); if (old && Array.isArray(old.rows)) x = old; }
+    return normalizeDB(x);
+  } catch (e) { return emptyDB(); }
 }
-function updateTotals(){let t={ap:0,am:0,at:0,cp:0,cm:0,ct:0};state.rows.forEach(d=>{Object.keys(t).forEach(k=>t[k]+=num(d[k]))});const mix=t.at+t.ct;const pallets=t.ap+t.am+t.cp+t.cm+num(state.floor);document.getElementById('totalPallets').textContent=pallets;document.getElementById('ambientTotal').textContent=t.ap+t.am;document.getElementById('coolTotal').textContent=t.cp+t.cm;document.getElementById('mixTotal').innerHTML=mix+'<span class="unit">min</span>';document.getElementById('aP').textContent=t.ap;document.getElementById('aM').textContent=t.am;document.getElementById('aT').textContent=t.at+' min';document.getElementById('cP').textContent=t.cp;document.getElementById('cM').textContent=t.cm;document.getElementById('cT').textContent=t.ct+' min';}
-function renderSupplierList(){const list=document.getElementById('supplierList');list.innerHTML=state.suppliers.map((n,i)=>`<div class="supplieritem"><span>${esc(n)}</span><button class="del" data-index="${i}" title="Verwijderen">Verwijder</button></div>`).join('')||'<div class="empty">Nog geen bewaarde namen.</div>';list.querySelectorAll('.del').forEach(b=>b.addEventListener('click',()=>{state.suppliers.splice(Number(b.dataset.index),1);save();renderSupplierList();renderSuggestions()}));renderSuggestions()}
-function renderSuggestions(){let dl=document.getElementById('supplierSuggestions');if(!dl){dl=document.createElement('datalist');dl.id='supplierSuggestions';document.body.appendChild(dl)}dl.innerHTML=state.suppliers.map(n=>`<option value="${esc(n)}"></option>`).join('')}
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
-document.getElementById('floor').addEventListener('input',e=>{state.floor=num(e.target.value);updateTotals();save()});
-document.getElementById('truckBtn').onclick=()=>{document.getElementById('supplierPop').classList.toggle('open');document.getElementById('phonePop').classList.remove('open')};document.getElementById('closePop').onclick=()=>document.getElementById('supplierPop').classList.remove('open');
-document.getElementById('phoneBtn').onclick=()=>{document.getElementById('phonePop').classList.toggle('open');document.getElementById('supplierPop').classList.remove('open')};document.getElementById('closePhonePop').onclick=()=>document.getElementById('phonePop').classList.remove('open');
-document.getElementById('addSupplier').onclick=()=>{const i=document.getElementById('newSupplier'),n=i.value.trim();if(!n)return;if(state.suppliers.some(x=>x.toLowerCase()===n.toLowerCase())){toast('Deze naam is al bewaard.');return}state.suppliers.push(n);i.value='';save();renderSupplierList();toast('Leverancier bewaard als suggestie.')};document.getElementById('newSupplier').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();document.getElementById('addSupplier').click()}});
-function printPage(){document.getElementById('supplierPop').classList.remove('open');document.getElementById('phonePop').classList.remove('open');state.rows=state.rows.filter((r,i)=>r.name.trim()||Object.keys(r).some(k=>k!=='name'&&num(r[k])>0));save();render();window.print()};document.getElementById('printBtn').onclick=printPage;
-document.getElementById('clearBtn').onclick=()=>{if(confirm('Wil je alle aantallen en leveranciers van deze dag wissen?')){state.rows=[blankRow()];state.floor=0;save();render();toast('De registratie is leeggemaakt.')}};
-const now=new Date();document.getElementById('today').textContent=now.toLocaleDateString('nl-BE',{weekday:'long',day:'numeric',month:'long',year:'numeric'});render();
-</script></body></html>
+function serialize() {
+  const blank = sheetBlank(db);
+  return {
+    suppliers: db.suppliers,
+    rows: db.rows.filter(rowHasData).map(r => ({ ...cleanRow(r), name: r.name.trim() })),
+    floor: int(db.floor), by: (db.by || '').trim(), notes: db.notes || '',
+    started: blank ? null : db.started, usage: db.usage, byNames: db.byNames,
+  };
+}
+
+let db = loadDB();
+let saveTimer = null;
+
+function setSaveState(state) {
+  const el = $('#saveState'), txt = $('#saveText');
+  el.classList.toggle('saving', state === 'saving');
+  el.classList.toggle('error', state === 'error');
+  if (state === 'saving') txt.textContent = 'Opslaan…';
+  else if (state === 'error') txt.textContent = 'Niet opgeslagen!';
+  else txt.textContent = 'Opgeslagen ' + new Date().toLocaleTimeString('nl-BE', { hour: '2-digit', minute: '2-digit' });
+}
+function touch() {
+  if (!db.started && !sheetBlank(db)) { db.started = todayKey(); renderHeader(); }
+}
+function scheduleSave() {
+  touch();
+  setSaveState('saving');
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveNow, 300);
+}
+function saveNow() {
+  clearTimeout(saveTimer); saveTimer = null;
+  touch();
+  if (!storageOK) { setSaveState('error'); return; }
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(serialize())); setSaveState('ok'); }
+  catch (e) { setSaveState('error'); toast('Opslaan is mislukt'); }
+}
+const flushSave = () => { if (saveTimer) saveNow(); };
+addEventListener('beforeunload', flushSave);
+document.addEventListener('visibilitychange', () => { if (document.hidden) flushSave(); });
+
+const snapshot = () => JSON.stringify(serialize());
+function restore(snap, msg = 'Hersteld') {
+  db = normalizeDB(JSON.parse(snap));
+  saveNow(); render(); renderSupplierList(); toast(msg);
+}
+
+/* =====================================================================
+   Berekeningen
+   ===================================================================== */
+function totals() {
+  const t = { ap: 0, am: 0, at: 0, cp: 0, cm: 0, ct: 0, rows: 0 };
+  const names = new Set();
+  for (const r of db.rows) {
+    if (!rowHasData(r)) continue;
+    t.rows++;
+    NUM_KEYS.forEach(k => t[k] += int(r[k]));
+    if (r.name.trim()) names.add(norm(r.name));
+  }
+  t.sup = names.size;
+  t.floor = int(db.floor);
+  t.amb = t.ap + t.am; t.cool = t.cp + t.cm; t.mix = t.at + t.ct;
+  t.total = t.amb + t.cool + t.floor;
+  return t;
+}
+const sheetDate = () => (db.started && !sheetBlank(db)) ? db.started : todayKey();
+const canonical = name => db.suppliers.find(s => norm(s) === norm(name)) || name.trim();
+
+/* =====================================================================
+   Dagblad tekenen
+   ===================================================================== */
+const rowsEl = $('#rows');
+
+function rowHTML(r, i) {
+  const cells = COLS.map(c => {
+    const v = int(r[c.k]);
+    const input = `<input class="cell n" inputmode="numeric" autocomplete="off" maxlength="4" data-row="${i}" data-key="${c.k}" value="${v || ''}" placeholder="0" aria-label="${c.label}, regel ${i + 1}">`;
+    return `<td class="${c.cls}">${c.min ? `<span class="minwrap">${input}<span class="u">min</span></span>` : input}</td>`;
+  }).join('');
+  const tot = rowTotal(r);
+  return `<tr${rowHasData(r) ? '' : ' class="is-empty"'}>`
+    + `<td class="c-idx"><span>${i + 1}</span></td>`
+    + `<td class="c-sup"><input class="cell sup" type="text" autocomplete="off" spellcheck="false" maxlength="80" data-row="${i}" data-key="name" value="${esc(r.name)}" placeholder="Leverancier typen…" aria-label="Leverancier, regel ${i + 1}" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="ac"></td>`
+    + cells
+    + `<td class="c-tot">${tot || '<span class="dash">–</span>'}</td>`
+    + `<td class="c-del"><button type="button" class="del" tabindex="-1" data-del="${i}" title="Regel verwijderen" aria-label="Regel ${i + 1} verwijderen">${icon('x')}</button></td>`
+    + `</tr>`;
+}
+function ensureTrailing() {
+  if (!db.rows.length || rowHasData(db.rows[db.rows.length - 1])) db.rows.push(blankRow());
+}
+function renderHeader() {
+  const k = sheetDate(), t = todayKey();
+  $('#dayLabel').textContent = fmtLong(k);
+  $('#todayBadge').hidden = k !== t;
+  const stale = k !== t;
+  $('#staleNotice').hidden = !stale;
+  if (stale) $('#staleText').innerHTML = `Dit blad is begonnen op <b>${esc(fmtLong(k).toLowerCase())}</b>. Druk het af en maak het leeg om aan vandaag te beginnen.`;
+}
+function render(focus) {
+  ensureTrailing();
+  renderHeader();
+  if (document.activeElement !== $('#filledBy')) $('#filledBy').value = db.by || '';
+  if (document.activeElement !== $('#notes')) $('#notes').value = db.notes || '';
+  $('#floor').value = int(db.floor);
+  $('#byList').innerHTML = db.byNames.map(n => `<option value="${esc(n)}"></option>`).join('');
+  rowsEl.innerHTML = db.rows.map(rowHTML).join('');
+  updateTotals();
+  if (focus) focusCell(focus.row, focus.key);
+}
+function updateTotals() {
+  const t = totals();
+  $('#kTotal').textContent = t.total;
+  $('#kTotalSub').innerHTML = `<b>${t.sup}</b> ${t.sup === 1 ? 'leverancier' : 'leveranciers'} · <b>${t.floor}</b> losse colli`;
+  const split = $('#kSplit');
+  const parts = [['amb', 'Ambient', t.amb], ['cool', 'Cool', t.cool], ['floor', 'Losse colli', t.floor]].filter(p => p[2] > 0);
+  split.classList.toggle('has', parts.length > 0);
+  split.innerHTML = parts.map(p => `<span class="s-${p[0]}" style="flex:${p[2]}" title="${p[1]}: ${p[2]}"></span>`).join('');
+  split.setAttribute('aria-label', parts.length ? parts.map(p => `${p[1]} ${p[2]}`).join(', ') : 'Nog geen palletten');
+  $('#kAmb').textContent = t.amb;
+  $('#kAmbSub').innerHTML = `<b>${t.ap}</b> palletten · <b>${t.am}</b> mix`;
+  $('#kCool').textContent = t.cool;
+  $('#kCoolSub').innerHTML = `<b>${t.cp}</b> palletten · <b>${t.cm}</b> mix`;
+  $('#kMix').innerHTML = fmtMinHTML(t.mix);
+  $('#kMixSub').innerHTML = `Ambient <b>${t.at}</b> · Cool <b>${t.ct}</b> min`;
+  ['ap', 'am', 'cp', 'cm'].forEach(k => $('#f-' + k).textContent = t[k]);
+  $('#f-at').textContent = t.at + ' min';
+  $('#f-ct').textContent = t.ct + ' min';
+  $('#f-tot').textContent = t.total;
+  $('#sheetMeta').textContent = t.rows ? `${plural(t.rows, 'regel', 'regels')} · ${plural(t.sup, 'leverancier', 'leveranciers')}` : 'Typ een leverancier om te beginnen';
+  $('#clearDay').disabled = sheetBlank(db) && !(db.by || '').trim();
+}
+function refreshRow(i) {
+  const tr = rowsEl.children[i], r = db.rows[i];
+  if (!tr || !r) return;
+  tr.classList.toggle('is-empty', !rowHasData(r));
+  const tot = rowTotal(r);
+  tr.querySelector('.c-tot').innerHTML = tot || '<span class="dash">–</span>';
+}
+function appendRow() {
+  db.rows.push(blankRow());
+  const i = db.rows.length - 1;
+  rowsEl.insertAdjacentHTML('beforeend', rowHTML(db.rows[i], i));
+}
+function maybeAppendBlank(i) {
+  if (i === db.rows.length - 1 && rowHasData(db.rows[i])) appendRow();
+}
+function focusCell(i, k) {
+  const el = rowsEl.querySelector(`[data-row="${i}"][data-key="${k}"]`);
+  if (el) el.focus();
+}
+function goNextRow(i) {
+  if (i >= db.rows.length - 1) {
+    if (!rowHasData(db.rows[i])) return;
+    appendRow();
+  }
+  focusCell(i + 1, 'name');
+}
+function deleteRow(i) {
+  const r = db.rows[i];
+  if (!r) return;
+  const snap = snapshot();
+  db.rows.splice(i, 1);
+  acClose(); render(); saveNow();
+  toast(`Regel ${r.name.trim() ? '“' + r.name.trim() + '”' : i + 1} verwijderd`, () => restore(snap, 'Regel teruggezet'));
+}
+function setRowName(i, name) {
+  const r = db.rows[i];
+  if (!r) return;
+  r.name = name;
+  const el = rowsEl.querySelector(`[data-row="${i}"][data-key="name"]`);
+  if (el && el.value !== name) el.value = name;
+  refreshRow(i); updateTotals(); maybeAppendBlank(i); scheduleSave();
+}
+
+/* ---------- Invoer in de tabel ---------- */
+let justFocused = null;
+rowsEl.addEventListener('input', e => {
+  const el = e.target, k = el.dataset.key;
+  if (!k) return;
+  const i = +el.dataset.row, r = db.rows[i];
+  if (!r) return;
+  if (k === 'name') {
+    r.name = el.value;
+    ac.suppressed = false;
+    acUpdate(el);
+  } else {
+    const clean = el.value.replace(/\D/g, '').slice(0, 4);
+    if (clean !== el.value) el.value = clean;
+    r[k] = int(clean);
+  }
+  refreshRow(i); updateTotals(); maybeAppendBlank(i); scheduleSave();
+});
+rowsEl.addEventListener('focusin', e => {
+  const el = e.target;
+  if (el.classList.contains('n')) { justFocused = el; el.select(); }
+  else if (el.classList.contains('sup')) acOpen(el);
+});
+rowsEl.addEventListener('mouseup', e => { if (e.target === justFocused) { e.preventDefault(); justFocused = null; } });
+rowsEl.addEventListener('focusout', e => {
+  const el = e.target;
+  if (el.classList.contains('n')) justFocused = null;
+  if (!el.classList.contains('sup')) return;
+  acClose();
+  const i = +el.dataset.row, r = db.rows[i];
+  if (!r) return;
+  const canon = r.name.trim() ? canonical(r.name) : '';
+  if (canon !== r.name) setRowName(i, canon);
+});
+rowsEl.addEventListener('keydown', e => {
+  const el = e.target, k = el.dataset && el.dataset.key;
+  if (!k) return;
+  const i = +el.dataset.row, isSup = k === 'name';
+  const acActive = isSup && ac.el === el && !acEl.hidden;
+  if (acActive) {
+    if (e.key === 'ArrowDown') { e.preventDefault(); acMove(1); return; }
+    if (e.key === 'ArrowUp' && ac.active >= 0) { e.preventDefault(); acMove(-1); return; }
+    if (e.key === 'Escape') { e.preventDefault(); acHide(); ac.suppressed = true; return; }
+  }
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    if (acActive && ac.active >= 0) acAccept();
+    goNextRow(i);
+    return;
+  }
+  if (e.key === 'Tab' && !e.shiftKey && acActive && ac.active >= 0) { acAccept(); return; }
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    e.preventDefault();
+    const j = i + (e.key === 'ArrowDown' ? 1 : -1);
+    if (j >= 0 && j < db.rows.length) focusCell(j, k);
+  }
+});
+rowsEl.addEventListener('click', e => {
+  const b = e.target.closest('.del');
+  if (b) deleteRow(+b.dataset.del);
+});
+
+/* ---------- Losse colli, naam, opmerkingen ---------- */
+const floorEl = $('#floor');
+function setFloor(v) { db.floor = Math.max(0, int(v)); floorEl.value = db.floor; updateTotals(); scheduleSave(); }
+floorEl.addEventListener('input', () => {
+  const c = floorEl.value.replace(/\D/g, '').slice(0, 4);
+  if (c !== floorEl.value) floorEl.value = c;
+  db.floor = int(c); updateTotals(); scheduleSave();
+});
+floorEl.addEventListener('focus', () => floorEl.select());
+floorEl.addEventListener('blur', () => { if (floorEl.value === '') floorEl.value = '0'; });
+floorEl.addEventListener('keydown', e => {
+  if (e.key === 'ArrowUp') { e.preventDefault(); setFloor(int(db.floor) + 1); floorEl.select(); }
+  if (e.key === 'ArrowDown') { e.preventDefault(); setFloor(int(db.floor) - 1); floorEl.select(); }
+});
+$('#floorMinus').addEventListener('click', () => setFloor(int(db.floor) - 1));
+$('#floorPlus').addEventListener('click', () => setFloor(int(db.floor) + 1));
+
+$('#filledBy').addEventListener('input', e => { db.by = e.target.value; updateTotals(); scheduleSave(); });
+$('#filledBy').addEventListener('change', e => {
+  const n = e.target.value.trim();
+  if (!n) return;
+  db.byNames = [n, ...db.byNames.filter(x => norm(x) !== norm(n))].slice(0, 12);
+  $('#byList').innerHTML = db.byNames.map(x => `<option value="${esc(x)}"></option>`).join('');
+  scheduleSave();
+});
+$('#notes').addEventListener('input', e => { db.notes = e.target.value; updateTotals(); scheduleSave(); });
+
+/* ---------- Alles wissen (met ongedaan maken) ---------- */
+function clearSheet() {
+  if (sheetBlank(db) && !(db.by || '').trim()) return;
+  const snap = snapshot();
+  const seen = new Set();
+  for (const r of db.rows) { const n = norm(r.name); if (n && !seen.has(n)) { seen.add(n); db.usage[n] = (db.usage[n] || 0) + 1; } }
+  db.rows = []; db.floor = 0; db.notes = ''; db.by = ''; db.started = null;
+  acClose(); render(); saveNow();
+  toast('Het blad is leeggemaakt', () => restore(snap, 'Blad teruggezet'));
+}
+$('#clearDay').addEventListener('click', clearSheet);
+$('#staleClear').addEventListener('click', clearSheet);
+
+/* =====================================================================
+   Aanvullen van leveranciers
+   ===================================================================== */
+const acEl = $('#ac');
+const ac = { el: null, items: [], active: -1, suppressed: false };
+
+function acCompute(q, rowIdx) {
+  const nq = norm(q);
+  const onSheet = new Set(db.rows.filter((r, j) => j !== rowIdx).map(r => norm(r.name)).filter(Boolean));
+  let list = [];
+  for (const name of db.suppliers) {
+    const nn = norm(name);
+    let s;
+    if (!nq) s = 1;
+    else if (nn === nq) s = 100;
+    else if (nn.startsWith(nq)) s = 80;
+    else if (nn.split(/[^a-z0-9]+/).some(w => w && w.startsWith(nq))) s = 60;
+    else if (nn.includes(nq)) s = 40;
+    else continue;
+    list.push({ type: 's', name, score: s, f: db.usage[nn] || 0, on: onSheet.has(nn) });
+  }
+  if (!nq) list = list.filter(x => !x.on).sort((a, b) => b.f - a.f || a.name.localeCompare(b.name, 'nl'));
+  else list.sort((a, b) => b.score - a.score || b.f - a.f || a.name.localeCompare(b.name, 'nl'));
+  list = list.slice(0, 8);
+  if (nq.length >= 2 && !db.suppliers.some(s => norm(s) === nq)) list.push({ type: 'add', name: q.trim().replace(/\s+/g, ' ') });
+  return list;
+}
+function hl(name, q) {
+  if (!q) return esc(name);
+  const map = []; let ns = '';
+  for (let i = 0; i < name.length; i++) for (const ch of stripMarks(name[i]).toLowerCase()) { ns += ch; map.push(i); }
+  let at = -1, from = 0;
+  while ((from = ns.indexOf(q, from)) !== -1) { if (from === 0 || /[^a-z0-9]/.test(ns[from - 1])) { at = from; break; } if (at < 0) at = from; from++; }
+  if (at < 0) return esc(name);
+  const s = map[at], e = map[at + q.length - 1] + 1;
+  return esc(name.slice(0, s)) + '<mark>' + esc(name.slice(s, e)) + '</mark>' + esc(name.slice(e));
+}
+function acOpen(el) {
+  ac.el = el; ac.suppressed = false;
+  if (!el.value.trim()) acUpdate(el); else acHide();
+}
+function acUpdate(el) {
+  ac.el = el;
+  if (ac.suppressed) return;
+  ac.items = acCompute(el.value, +el.dataset.row);
+  ac.active = norm(el.value) && ac.items[0] && ac.items[0].type === 's' ? 0 : -1;
+  acRender();
+}
+function acRender() {
+  if (!ac.el || !ac.items.length) { acHide(); return; }
+  const q = norm(ac.el.value);
+  let html = '';
+  if (!q) html += `<div class="ac-head">${ac.items.some(x => x.f > 0) ? 'Vaak gebruikt' : 'Leveranciers'}</div>`;
+  html += ac.items.map((it, idx) => {
+    const act = idx === ac.active ? ' active' : '';
+    if (it.type === 'add') return `<div class="ac-item ac-add${act}" data-idx="${idx}" role="option" id="ac-${idx}" aria-selected="${!!act}">${icon('plus')}<span>“${esc(it.name)}” bewaren als leverancier</span></div>`;
+    const meta = it.on ? '<span class="meta">al op dit blad</span>' : '';
+    return `<div class="ac-item${act}" data-idx="${idx}" role="option" id="ac-${idx}" aria-selected="${!!act}"><span>${hl(it.name, q)}</span>${meta}</div>`;
+  }).join('');
+  html += `<div class="ac-foot"><span><kbd>Tab</kbd> overnemen</span><span><kbd>↑</kbd><kbd>↓</kbd> kiezen</span><span><kbd>Esc</kbd> sluiten</span></div>`;
+  acEl.innerHTML = html;
+  acEl.hidden = false;
+  ac.el.setAttribute('aria-expanded', 'true');
+  if (ac.active >= 0) ac.el.setAttribute('aria-activedescendant', 'ac-' + ac.active); else ac.el.removeAttribute('aria-activedescendant');
+  acPosition();
+}
+function acPosition() {
+  if (!ac.el || acEl.hidden) return;
+  const r = ac.el.getBoundingClientRect();
+  if (r.bottom < 0 || r.top > innerHeight) { acEl.style.visibility = 'hidden'; return; }
+  acEl.style.visibility = '';
+  acEl.style.minWidth = Math.max(r.width, 270) + 'px';
+  const h = acEl.offsetHeight, w = acEl.offsetWidth;
+  const top = (innerHeight - r.bottom < h + 10 && r.top > h + 10) ? r.top - h - 4 : r.bottom + 4;
+  acEl.style.top = top + 'px';
+  acEl.style.left = Math.max(8, Math.min(r.left, innerWidth - w - 8)) + 'px';
+}
+function acMove(dir) {
+  const n = ac.items.length;
+  if (!n) return;
+  ac.active = Math.max(-1, Math.min(n - 1, ac.active + dir));
+  acRender();
+  const a = acEl.querySelector('.active');
+  if (a) a.scrollIntoView({ block: 'nearest' });
+}
+function acHide() {
+  acEl.hidden = true; ac.items = []; ac.active = -1;
+  if (ac.el) { ac.el.setAttribute('aria-expanded', 'false'); ac.el.removeAttribute('aria-activedescendant'); }
+}
+function acClose() { acHide(); ac.el = null; }
+function acAccept() {
+  const it = ac.items[ac.active], el = ac.el;
+  if (!it || !el) return false;
+  if (it.type === 'add') addSupplier(it.name, true);
+  const i = +el.dataset.row;
+  acHide(); ac.suppressed = true;
+  setRowName(i, it.name);
+  if (it.type === 'add') toast(`“${it.name}” bewaard in de leverancierslijst`);
+  return true;
+}
+acEl.addEventListener('mousedown', e => e.preventDefault());
+acEl.addEventListener('click', e => {
+  const item = e.target.closest('.ac-item');
+  if (!item || !ac.el) return;
+  const i = +ac.el.dataset.row;
+  ac.active = +item.dataset.idx;
+  acAccept();
+  focusCell(i, 'ap');
+});
+addEventListener('resize', acPosition);
+addEventListener('scroll', acPosition, true);
+
+/* =====================================================================
+   Leverancierslijst (zijpaneel)
+   ===================================================================== */
+const supSearch = $('#supSearch');
+function addSupplier(name, silent) {
+  name = String(name).trim().replace(/\s+/g, ' ').slice(0, 60);
+  if (!name) return false;
+  if (db.suppliers.some(s => norm(s) === norm(name))) { if (!silent) toast('Deze leverancier staat al in de lijst'); return false; }
+  db.suppliers.push(name);
+  scheduleSave(); renderSupplierList();
+  if (!silent) toast(`“${name}” toegevoegd`);
+  return true;
+}
+function removeSupplier(name) {
+  const idx = db.suppliers.indexOf(name);
+  if (idx < 0) return;
+  const snap = snapshot();
+  db.suppliers.splice(idx, 1);
+  saveNow(); renderSupplierList();
+  toast(`“${name}” verwijderd uit de lijst`, () => restore(snap, 'Leverancier teruggezet'));
+}
+function renameSupplier(oldName, newName) {
+  newName = String(newName).trim().replace(/\s+/g, ' ').slice(0, 60);
+  const idx = db.suppliers.indexOf(oldName);
+  if (idx < 0 || !newName || newName === oldName) { renderSupplierList(); return; }
+  if (db.suppliers.some((s, j) => j !== idx && norm(s) === norm(newName))) { toast('Die naam staat al in de lijst'); renderSupplierList(); return; }
+  const snap = snapshot();
+  db.suppliers[idx] = newName;
+  const on = norm(oldName), nn = norm(newName);
+  if (db.usage[on]) { db.usage[nn] = (db.usage[nn] || 0) + db.usage[on]; delete db.usage[on]; }
+  for (const r of db.rows) if (norm(r.name) === on) r.name = newName;
+  saveNow(); renderSupplierList(); render();
+  toast(`Hernoemd naar “${newName}”`, () => restore(snap, 'Naam teruggezet'));
+}
+function renderSupplierList() {
+  const q = norm(supSearch.value);
+  const list = db.suppliers.slice().sort((a, b) => a.localeCompare(b, 'nl')).filter(n => !q || norm(n).includes(q));
+  $('#dsSub').textContent = plural(db.suppliers.length, 'leverancier', 'leveranciers') + ' in de keuzelijst';
+  let html = '';
+  if (q && !db.suppliers.some(s => norm(s) === q)) html += `<button class="addline" id="addLine">${icon('plus')}<span>“${esc(supSearch.value.trim())}” toevoegen</span></button>`;
+  html += list.map(n => `<div class="sitem" data-name="${esc(n)}"><span class="nm" title="${esc(n)}">${hl(n, q)}</span><span class="acts"><button class="mini" data-act="edit" title="Hernoemen" aria-label="${esc(n)} hernoemen">${icon('edit')}</button><button class="mini danger" data-act="del" title="Verwijderen uit de lijst" aria-label="${esc(n)} verwijderen">${icon('trash')}</button></span></div>`).join('');
+  if (!list.length && !q) html = '<div class="empty"><b>Nog geen leveranciers</b>Typ hierboven een naam en druk op Enter.</div>';
+  $('#supList').innerHTML = html;
+}
+supSearch.addEventListener('input', renderSupplierList);
+supSearch.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  e.preventDefault();
+  if (supSearch.value.trim() && addSupplier(supSearch.value)) { supSearch.value = ''; renderSupplierList(); }
+});
+$('#supList').addEventListener('click', e => {
+  if (e.target.closest('#addLine')) { if (addSupplier(supSearch.value)) { supSearch.value = ''; renderSupplierList(); supSearch.focus(); } return; }
+  const btn = e.target.closest('[data-act]');
+  if (!btn) return;
+  const item = btn.closest('.sitem'), name = item.dataset.name;
+  if (btn.dataset.act === 'del') return removeSupplier(name);
+  item.innerHTML = `<input value="${esc(name)}" maxlength="60" aria-label="Nieuwe naam voor ${esc(name)}">`;
+  const inp = item.querySelector('input');
+  inp.focus(); inp.select();
+  let done = false;
+  const commit = ok => { if (done) return; done = true; ok ? renameSupplier(name, inp.value) : renderSupplierList(); };
+  inp.addEventListener('keydown', ev => {
+    if (ev.key === 'Enter') { ev.preventDefault(); commit(true); }
+    if (ev.key === 'Escape') { ev.preventDefault(); ev.stopPropagation(); commit(false); }
+  });
+  inp.addEventListener('blur', () => commit(true));
+});
+
+/* =====================================================================
+   Telefoonnummers (zijpaneel)
+   ===================================================================== */
+function renderPhones() {
+  const q = norm($('#phoneSearch').value);
+  const html = PHONEBOOK.map(g => {
+    const sets = g.sets.map(s => s.filter(([n, t]) => !q || norm(n).includes(q) || t.includes(q) || norm(g.name).includes(q))).filter(s => s.length);
+    if (!sets.length) return '';
+    return `<section class="pgroup"><h3>${esc(g.name)}</h3><div class="pcard">${sets.map(s => `<div class="pset">${s.map(([n, t]) => `<div class="prow"><span>${hl(n, q)}</span><span class="tel">${esc(t)}</span></div>`).join('')}</div>`).join('')}</div></section>`;
+  }).join('');
+  $('#phoneList').innerHTML = html || '<div class="empty"><b>Niets gevonden</b>Probeer een andere naam of een deel van het nummer.</div>';
+}
+$('#phoneSearch').addEventListener('input', renderPhones);
+
+/* =====================================================================
+   Zijpanelen openen / sluiten
+   ===================================================================== */
+let drawerReturn = null;
+function showDrawer(id, opener) {
+  closeDrawers(true);
+  acClose();
+  const d = $('#' + id);
+  d.classList.add('open'); d.setAttribute('aria-hidden', 'false');
+  $('#scrim').classList.add('show');
+  drawerReturn = opener || null;
+  setTimeout(() => { const inp = d.querySelector('.dr-search input'); if (inp) { inp.focus(); inp.select(); } }, 60);
+}
+function closeDrawers(silent) {
+  const open = $$('.drawer.open');
+  open.forEach(d => { d.classList.remove('open'); d.setAttribute('aria-hidden', 'true'); });
+  $('#scrim').classList.remove('show');
+  if (open.length && !silent && drawerReturn) drawerReturn.focus();
+}
+$('#openSuppliers').addEventListener('click', e => { supSearch.value = ''; renderSupplierList(); showDrawer('drawerSuppliers', e.currentTarget); });
+$('#openPhones').addEventListener('click', e => { $('#phoneSearch').value = ''; renderPhones(); showDrawer('drawerPhones', e.currentTarget); });
+$('#scrim').addEventListener('click', () => closeDrawers());
+$$('[data-close]').forEach(b => b.addEventListener('click', () => closeDrawers()));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('.drawer.open')) { e.preventDefault(); closeDrawers(); } });
+
+/* =====================================================================
+   Afdrukblad
+   ===================================================================== */
+function buildPrintSheet() {
+  const t = totals(), k = sheetDate(), now = new Date();
+  const rows = db.rows.filter(rowHasData);
+  const z = '<span class="z">–</span>';
+  const v = n => int(n) ? int(n) : z;
+  const vm = n => int(n) ? `${int(n)}<span class="u">min</span>` : z;
+  const notes = (db.notes || '').trim(), by = (db.by || '').trim();
+  const printed = `Afgedrukt op ${now.toLocaleDateString('nl-BE')} om ${now.toLocaleTimeString('nl-BE', { hour: '2-digit', minute: '2-digit' })}`;
+  $('#psDay').textContent = fmtLong(k);
+  $('#psBy').textContent = by;
+  $('#psBy').classList.toggle('blank', !by);
+  $('#psBody').innerHTML = `
+  <section class="ps-sum">
+    <div class="ps-box ps-main"><span class="l">Totaal palletten</span><span class="v">${t.total}</span><span class="s">${plural(t.sup, 'leverancier', 'leveranciers')}</span></div>
+    <div class="ps-box ps-amb"><span class="l">Ambient</span><span class="v">${t.amb}</span><span class="s">${t.ap} palletten + ${t.am} mix</span></div>
+    <div class="ps-box ps-cool"><span class="l">Cool</span><span class="v">${t.cool}</span><span class="s">${t.cp} palletten + ${t.cm} mix</span></div>
+    <div class="ps-box"><span class="l">Losse colli</span><span class="v">${t.floor}</span><span class="s">op de vloer</span></div>
+    <div class="ps-box"><span class="l">Totale mixtijd</span><span class="v">${esc(fmtMin(t.mix))}</span><span class="s">Ambient ${t.at} min · Cool ${t.ct} min</span></div>
+  </section>
+
+  <table class="ps-table">
+    <colgroup>
+      <col style="width:8mm"><col>
+      <col style="width:21mm"><col style="width:19mm"><col style="width:21mm">
+      <col style="width:21mm"><col style="width:19mm"><col style="width:21mm">
+      <col style="width:21mm">
+    </colgroup>
+    <thead>
+      <tr>
+        <th rowspan="3">#</th>
+        <th rowspan="3" class="left">Leverancier</th>
+        <th colspan="3" class="g amb gs">Ambient<small>15–25 °C</small></th>
+        <th colspan="3" class="g cool gs">Cool<small>2–8 °C</small></th>
+        <th rowspan="3" class="tot">Totaal</th>
+      </tr>
+      <tr>
+        <th rowspan="2" class="amb pal gs">Palletten</th>
+        <th colspan="2" class="amb mix ml mixhead"><span>Mix</span></th>
+        <th rowspan="2" class="cool pal gs">Palletten</th>
+        <th colspan="2" class="cool mix ml mixhead"><span>Mix</span></th>
+      </tr>
+      <tr>
+        <th class="amb mix ml sub">Palletten</th><th class="amb mix sub">Tijd</th>
+        <th class="cool mix ml sub">Palletten</th><th class="cool mix sub">Tijd</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${rows.length ? rows.map((r, i) => `<tr>
+        <td class="nr">${i + 1}</td>
+        <td class="left name">${esc(r.name.trim() || '—')}</td>
+        <td class="amb pal gs">${v(r.ap)}</td><td class="amb mix ml">${v(r.am)}</td><td class="amb mix">${vm(r.at)}</td>
+        <td class="cool pal gs">${v(r.cp)}</td><td class="cool mix ml">${v(r.cm)}</td><td class="cool mix">${vm(r.ct)}</td>
+        <td class="tot">${rowTotal(r) || z}</td>
+      </tr>`).join('') : '<tr><td colspan="9" class="empty">Er werden geen leveringen geregistreerd.</td></tr>'}
+      ${t.floor ? `<tr class="floor"><td class="nr"></td><td class="left">Losse colli op de vloer</td><td class="amb pal gs"></td><td class="amb mix ml"></td><td class="amb mix"></td><td class="cool pal gs"></td><td class="cool mix ml"></td><td class="cool mix"></td><td class="tot">${t.floor}</td></tr>` : ''}
+    </tbody>
+    <tfoot>
+      <tr class="sum">
+        <td></td><td class="left name">Totaal</td>
+        <td class="amb pal gs">${t.ap}</td><td class="amb mix ml">${t.am}</td><td class="amb mix">${t.at}<span class="u">min</span></td>
+        <td class="cool pal gs">${t.cp}</td><td class="cool mix ml">${t.cm}</td><td class="cool mix">${t.ct}<span class="u">min</span></td>
+        <td class="tot">${t.total}</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <section class="ps-notes">
+    <span class="ps-lab">Opmerkingen</span>
+    ${notes ? `<div class="ps-notetext">${esc(notes)}</div>` : '<div class="ps-lines"><i></i><i></i></div>'}
+  </section>
+
+  <footer class="ps-foot"><span>Febelco Izegem · Palletaanmeldingen · ${esc(fmtLong(k))}</span><span>${esc(printed)}</span></footer>`;
+  fitPrintSheet();
+}
+// Kies de ruimste regelafstand waarmee alles op één A4 (liggend) past.
+function fitPrintSheet() {
+  const sheet = $('#printSheet');
+  const pxPerMm = 96 / 25.4;
+  const maxH = 186 * pxPerMm;                       // 210 mm − marges − veiligheidsmarge
+  sheet.style.cssText = 'display:block;position:absolute;left:-10000px;top:0;width:273mm;visibility:hidden';
+  const options = ['roomy', '', 'compact', 'dense', 'tiny', 'micro'];   // past niets, dan loopt 'micro' door op pagina 2
+  for (const d of options) {
+    sheet.className = 'ps' + (d ? ' ' + d : '');
+    if (sheet.offsetHeight <= maxH) break;
+  }
+  sheet.style.cssText = '';
+}
+let savedTitle = document.title;
+addEventListener('beforeprint', () => {
+  acClose(); closeDrawers(true); flushSave();
+  buildPrintSheet();
+  savedTitle = document.title;
+  document.title = `Palletaanmeldingen Izegem ${sheetDate()}`;   // nette bestandsnaam bij "Opslaan als PDF"
+});
+addEventListener('afterprint', () => { document.title = savedTitle; });
+const doPrint = () => { buildPrintSheet(); window.print(); };
+$('#printBtn').addEventListener('click', doPrint);
+$('#stalePrint').addEventListener('click', doPrint);
+
+/* =====================================================================
+   Toast
+   ===================================================================== */
+let toastTimer;
+function toast(msg, undo) {
+  const t = $('#toast'), b = $('#toastUndo');
+  $('#toastMsg').textContent = msg;
+  b.hidden = !undo;
+  b.onclick = undo ? () => { hideToast(); undo(); } : null;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(hideToast, undo ? 7000 : 2600);
+}
+function hideToast() { $('#toast').classList.remove('show'); }
+
+/* =====================================================================
+   Opstart
+   ===================================================================== */
+// Wijzigingen uit een ander venster/tabblad overnemen
+addEventListener('storage', e => {
+  if (e.key !== STORE_KEY || !e.newValue) return;
+  try { db = normalizeDB(JSON.parse(e.newValue)); } catch (err) { return; }
+  const a = document.activeElement;
+  const f = a && a.dataset && a.dataset.row != null ? { row: +a.dataset.row, key: a.dataset.key } : null;
+  render(f); renderSupplierList();
+});
+// Na middernacht de datum en melding bijwerken
+let lastToday = todayKey();
+setInterval(() => { const t = todayKey(); if (t !== lastToday) { lastToday = t; renderHeader(); } }, 60000);
+
+if (!storageOK) $('#storageWarn').hidden = false;
+render();
+renderSupplierList();
+renderPhones();
+setSaveState('ok');
+})();
+</script>
+</body>
+</html>
