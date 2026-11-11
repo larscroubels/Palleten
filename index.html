@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Palletaanmeldingen Izegem</title>
+<style>
+:root{--navy:#142d4e;--blue:#1769aa;--blue2:#eaf3fb;--ink:#182536;--muted:#718096;--line:#e4eaf0;--bg:#f4f7fa;--white:#fff;--green:#16845b;--shadow:0 12px 35px rgba(25,48,75,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}button,input{font:inherit}.topbar{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,56px);position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:14px}.brandlogo{font-size:20px;font-weight:950;letter-spacing:-1.4px;color:#183b28;font-style:italic;border-left:5px solid #68a83f;padding:7px 0 7px 10px;line-height:1}.brandname{font-weight:800;color:var(--navy);font-size:17px;letter-spacing:-.4px}.brandname small{display:block;color:#8290a0;font-size:10px;letter-spacing:1.7px;font-weight:700;margin-top:2px}.topright{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px}.live{width:8px;height:8px;border-radius:50%;background:#26a269;display:inline-block;margin-right:6px}.wrap{max-width:1440px;margin:0 auto;padding:34px clamp(16px,4vw,56px) 80px}.heading{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:26px}.eyebrow{color:var(--blue);font-weight:800;font-size:11px;letter-spacing:1.7px;text-transform:uppercase}.heading h1{margin:7px 0 6px;font-size:clamp(26px,3vw,36px);letter-spacing:-1.2px;color:var(--navy)}.heading p{margin:0;color:var(--muted);font-size:14px}.datepill{background:white;border:1px solid var(--line);border-radius:12px;padding:11px 15px;color:#526174;font-size:13px;white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:22px}.stat{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px 20px;box-shadow:0 3px 12px rgba(25,48,75,.025)}.stat .label{font-size:12px;color:var(--muted);font-weight:650}.stat .value{font-size:29px;font-weight:800;color:var(--navy);letter-spacing:-1px;margin-top:8px}.stat .unit{font-size:12px;color:var(--muted);font-weight:600;margin-left:5px;letter-spacing:0}.content{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.sectionhead{padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}.sectiontitle{font-weight:800;color:var(--navy);font-size:16px}.sectiondesc{color:var(--muted);font-size:12px;margin-top:4px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:white;color:#41536a;padding:10px 14px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;transition:.15s}.btn:hover{background:#f5f8fb}.btn.primary{background:var(--blue);border-color:var(--blue);color:white}.btn.primary:hover{background:#105b96}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:850px}th{font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:#748398;background:#f8fafc;text-align:center;padding:14px 10px;border-bottom:1px solid var(--line)}th:first-child,td:first-child{text-align:left;padding-left:24px}.grouphead{background:#edf5fc;color:var(--navy);font-size:12px}td{padding:9px 10px;border-bottom:1px solid #edf1f5;text-align:center;font-size:13px}tr:last-child td{border-bottom:0}.supplier{font-weight:700;color:#34465c;min-width:220px}.supplierinput{width:100%;min-width:190px;border:1px solid #e0e7ee;border-radius:8px;padding:9px 10px;color:#24384f;background:#fff;outline:none}.supplierinput:focus{border-color:#63a6d9;box-shadow:0 0 0 3px #e6f3fc}.supplierinput::placeholder{color:#a0acb9;font-weight:500}.num{width:78px;padding:9px 8px;border:1px solid #e0e7ee;border-radius:8px;text-align:center;color:#24384f;background:#fff;outline:none}.num:focus{border-color:#63a6d9;box-shadow:0 0 0 3px #e6f3fc}.min{width:82px}.totalrow{background:#f7fafc;font-weight:800;color:var(--navy)}.floor{padding:20px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px}.floorlabel{font-weight:750;color:#34465c;font-size:13px}.floorhint{font-size:12px;color:var(--muted);margin-top:4px}.floorinput{display:flex;align-items:center;gap:10px}.footerline{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:#fbfcfd;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.printcta{display:flex;align-items:center;gap:10px;margin-top:20px;background:var(--navy);color:white;padding:19px 22px;border-radius:15px;justify-content:space-between}.printcta strong{font-size:15px}.printcta span{font-size:12px;color:#c4d4e5;display:block;margin-top:4px}.printcta button{background:#fff;color:var(--navy);border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}.floatwrap{position:fixed;right:25px;bottom:25px;z-index:10}.truckbtn{width:58px;height:58px;border:0;border-radius:19px;background:var(--blue);color:white;box-shadow:0 9px 24px rgba(23,105,170,.35);cursor:pointer;font-size:25px}.supplierpop{display:none;position:absolute;right:0;bottom:70px;width:300px;background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px}.supplierpop.open{display:block}.pophead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.pophead strong{color:var(--navy)}.close{border:0;background:#f1f4f7;border-radius:8px;width:28px;height:28px;cursor:pointer}.supplierlist{max-height:260px;overflow:auto;margin:10px 0}.supplieritem{padding:8px 3px;border-bottom:1px solid #f0f2f5;font-size:13px;display:flex;justify-content:space-between;gap:10px}.del{border:0;background:none;color:#c05c5c;cursor:pointer}.addrow{display:flex;gap:7px}.addrow input{min-width:0;flex:1;border:1px solid var(--line);border-radius:8px;padding:9px}.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:10px}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#172d47;color:white;padding:11px 16px;border-radius:10px;font-size:13px;opacity:0;pointer-events:none;transition:.2s;z-index:20}.toast.show{opacity:1}.empty{text-align:center;padding:25px;color:var(--muted)}
+@media(max-width:850px){.stats{grid-template-columns:repeat(2,1fr)}.heading{align-items:flex-start;flex-direction:column}.sectionhead{align-items:flex-start;flex-direction:column}.floor{align-items:flex-start;flex-direction:column}.printcta{align-items:flex-start;flex-direction:column}.topright .status{display:none}}
+@media(max-width:480px){.stats{gap:9px}.stat{padding:14px}.stat .value{font-size:24px}.topbar{height:66px}.brandlogo{font-size:17px}.datepill{font-size:12px}}
+@media print{body{background:white}.topbar{position:static;border:0;padding:0 0 14px}.wrap{max-width:none;padding:10px 0}.heading{margin-bottom:15px}.stats{gap:8px;margin-bottom:14px}.stat{box-shadow:none;padding:10px;border:1px solid #d7dfe7}.stat .value{font-size:21px}.content{box-shadow:none;border:1px solid #cbd5df}.sectionhead{padding:12px 15px}.actions,.floatwrap,.printcta,.footerline .noprint,.floorhint{display:none!important}.tablewrap{overflow:visible}table{min-width:0;font-size:10px}th,td{padding:6px 5px;font-size:9px}th:first-child,td:first-child{padding-left:10px}.num{border:0;padding:0;width:auto;background:transparent;font-size:10px}.supplierinput{border:0;padding:0;background:transparent;font-size:10px;min-width:0}.floor{padding:10px 15px}.floorinput .num{width:40px}.printnote{display:block!important}.eyebrow{font-size:9px}.heading h1{font-size:24px}}
+.printnote{display:none}
+
+/* Rustiger en functioneler: meer een interne magazijntool, minder dashboard */
+.brandlogo{width:112px;height:48px;object-fit:contain;border:0;padding:0;display:block}
+.topbar{height:68px;padding:0 30px}
+.brand{gap:18px}.brandname{font-size:15px;letter-spacing:0;font-weight:750}.brandname small{font-size:9px;letter-spacing:1.2px}
+.wrap{max-width:1360px;padding-top:26px}
+.heading{margin-bottom:18px}.heading h1{font-size:29px;letter-spacing:-.5px}
+.stats{gap:10px;margin-bottom:16px}.stat{border-radius:8px;box-shadow:none;padding:13px 16px}.stat .value{font-size:25px;margin-top:4px}
+.content{border-radius:9px;box-shadow:none}.sectionhead{padding:16px 18px}.sectiontitle{font-size:15px}.btn{border-radius:6px}.btn.primary{background:#087b63;border-color:#087b63}.btn.primary:hover{background:#066b56}
+th{background:#f2f5f6;font-size:10px}td{padding:7px 8px}.supplierinput,.num{border-radius:4px}.supplierinput:focus,.num:focus{border-color:#087b63;box-shadow:0 0 0 2px #e2f2ed}
+.grouphead{background:#e8f1ee;color:#183d35}.totalrow{background:#f1f5f3}.floor{padding:15px 18px}.footerline{padding:12px 18px}
+.printcta{background:#173b35;border-radius:8px;padding:15px 18px}.printcta button{border-radius:6px}
+.floatwrap{right:20px;bottom:20px;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.truckbtn{background:#087b63;border-radius:50%;width:52px;height:52px;box-shadow:0 3px 10px #0002}.phonebtn{background:#fff;color:#173b35;border:1px solid #dce5e1;border-radius:50%;width:52px;height:52px;box-shadow:0 3px 10px #0002;display:grid;place-items:center;cursor:pointer}.phonebtn svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.phonepop{display:none;position:absolute;right:0;bottom:124px;width:310px;max-height:min(70vh,620px);overflow:auto;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 8px 24px #0002;padding:16px}.phonepop.open{display:block}.phonegroup{padding:9px 0;border-bottom:1px solid #e8edf0}.phonegroup:last-child{border-bottom:0}.phonegroup h3{margin:0 0 7px;font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:#087b63}.phonecontact{display:flex;justify-content:space-between;gap:14px;padding:5px 2px;font-size:13px;color:#34465c}.phonecontact strong{font-variant-numeric:tabular-nums;color:#173b35}.phone-divider{border-top:1px dashed #cbd5df;margin:6px 0}
+.supplierpop{border-radius:8px;box-shadow:0 8px 24px #0002}.supplieritem{padding:7px 2px}
+@media(max-width:850px){.topbar{padding:0 16px}.brandlogo{width:88px;height:40px}}
+@media print{.brandlogo{width:90px;height:38px}}
+
+/* Duidelijk onderscheid tussen Ambient en Cool */
+.ambient-head{background:#e8f3e9!important;color:#285d3a!important;border-bottom:2px solid #8ab99a!important}
+.cool-head{background:#e7f0fb!important;color:#24558a!important;border-bottom:2px solid #8db4df!important}
+.ambient-col{background:#f5faf5}
+.cool-col{background:#f3f7fd}
+tbody tr:hover .ambient-col{background:#eaf5eb}tbody tr:hover .cool-col{background:#e8f1fc}
+.ambient-col .num{border-color:#d5e7d8}.cool-col .num{border-color:#d5e1f1}
+.stat:has(#ambientTotal){border-top:4px solid #4b9560}.stat:has(#coolTotal){border-top:4px solid #4e85c3}
+#ambientTotal{color:#347448}#coolTotal{color:#326da8}
+@media print{
+ @page{size:landscape;margin:12mm}
+ *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+ body{background:#fff!important;color:#1d2b3b}
+ .topbar{height:auto;padding:0 0 10px;border-bottom:2px solid #dce4eb;margin-bottom:12px}
+ .brandlogo{max-width:105px;max-height:54px;object-fit:contain}
+ .brandname{font-size:15px;letter-spacing:.5px}
+ .wrap{padding:0;max-width:none}
+ .heading{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px;padding:10px 14px;background:#f0f4f7;border-radius:8px}
+ .heading h1{font-size:24px;margin:0;color:#173b35}
+ .datepill{border:0;background:#fff;padding:8px 12px;font-weight:700;color:#34495e}
+ .stats{grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:12px}
+ .stat{border:1px solid #dce4e9;border-radius:8px;box-shadow:none;padding:10px 13px}
+ .stat .label{font-size:10px;text-transform:uppercase;letter-spacing:.5px}
+ .stat .value{font-size:22px;margin-top:4px}
+ .content{border:1px solid #cbd6df;border-radius:8px;box-shadow:none;overflow:visible}
+ .sectionhead{padding:10px 14px;background:#f7f9fb}
+ .sectiontitle{font-size:14px}
+ .tablewrap{overflow:visible}table{min-width:0;border-collapse:separate;border-spacing:0;width:100%}
+ th{padding:9px 7px;font-size:9px;background:#edf1f5!important;color:#405266;border-bottom:1px solid #cbd6df}
+ th.ambient-head{background:#dceee0!important;color:#285d3a!important;border-bottom:2px solid #77a984!important}
+ th.cool-head{background:#dce9f8!important;color:#24558a!important;border-bottom:2px solid #79a5d3!important}
+ td{padding:7px 6px;font-size:10px;border-bottom:1px solid #e3e9ee}
+ td.ambient-col{background:#f1f8f2!important}td.cool-col{background:#eff5fc!important}
+ .supplierinput,.num{font-size:10px;border:0!important;background:transparent!important;box-shadow:none!important;padding:0;min-width:0}
+ .supplierinput{font-weight:650;color:#263c52}
+ .totalrow td{background:#e9eef2!important;font-weight:800;border-top:2px solid #cbd6df}
+ .floor{padding:10px 14px;background:#fafbfc}
+ .floorlabel{font-size:11px}.floorinput .num{font-size:11px}
+ .printnote{display:block!important;margin:10px 0 0;text-align:right;color:#718096;font-size:9px}
+ .actions,.floatwrap,.printcta,.footerline,.floorhint{display:none!important}
+}
+</style></head>
+<body>
+<header class="topbar"><div class="brand"><img class="brandlogo" src="https://www.febelco.be/media/1060/febelco-logo-400x300.png" alt="Febelco logo"><div class="brandname">PALLETAANMELDINGEN</div></div></header>
+<main class="wrap">
+ <div class="heading"><div><h1>Palletaanmeldingen</h1></div><div class="datepill" id="today"></div></div>
+ <section class="stats">
+  <div class="stat"><div class="label">Totaal palletten</div><div class="value" id="totalPallets">0</div></div>
+  <div class="stat"><div class="label">Ambient palletten</div><div class="value" id="ambientTotal">0</div></div>
+  <div class="stat"><div class="label">Cool palletten</div><div class="value" id="coolTotal">0</div></div>
+  <div class="stat"><div class="label">Totale mixtijd</div><div class="value" id="mixTotal">0<span class="unit">min</span></div></div>
+ </section>
+ <section class="content">
+  <div class="sectionhead"><div><div class="sectiontitle">Ontvangen palletten</div></div><div class="actions"><button class="btn" id="clearBtn">Alles wissen</button><button class="btn primary" id="printBtn">Afdrukken</button></div></div>
+  <div class="tablewrap"><table><thead><tr><th rowspan="2">Leverancier</th><th class="grouphead ambient-head" colspan="3">Ambient</th><th class="grouphead cool-head" colspan="3">Cool</th></tr><tr><th>Palletten</th><th>Mix palletten</th><th>Mixtijd (min)</th><th>Palletten</th><th>Mix palletten</th><th>Mixtijd (min)</th></tr></thead><tbody id="rows"></tbody><tfoot><tr class="totalrow"><td>TOTAAL</td><td class="ambient-col" id="aP">0</td><td class="ambient-col" id="aM">0</td><td class="ambient-col" id="aT">0 min</td><td class="cool-col" id="cP">0</td><td class="cool-col" id="cM">0</td><td class="cool-col" id="cT">0 min</td></tr></tfoot></table></div>
+  <div class="floor"><div><div class="floorlabel">Losse colli palletten op de vloer</div><div class="floorhint">Aantal extra palletten die niet aan een leverancier gekoppeld zijn.</div></div><div class="floorinput"><input class="num" id="floor" type="number" min="0" step="1" value="0" aria-label="Losse colli palletten vloer"><span style="font-size:12px;color:#718096">palletten</span></div></div>
+  
+ </section>
+
+ <p class="printnote">Palletaanmeldingen Izegem · Febelco</p>
+</main>
+<div class="floatwrap">
+<div class="phonepop" id="phonePop"><div class="pophead"><strong>Telefoonnummers</strong><button class="close" id="closePhonePop" aria-label="Sluiten">×</button></div>
+<div class="phonegroup"><h3>Infodienst</h3>
+<div class="phonecontact"><span>Sofie</span><strong>2494</strong></div><div class="phonecontact"><span>Lotte</span><strong>2486</strong></div><div class="phonecontact"><span>Inne</span><strong>2496</strong></div><div class="phonecontact"><span>Dorina</span><strong>2490</strong></div><div class="phonecontact"><span>Gûl</span><strong>8289</strong></div></div>
+<div class="phonegroup"><h3>Izegem</h3>
+<div class="phonecontact"><span>Marieke</span><strong>7785</strong></div><div class="phonecontact"><span>Kimberly</span><strong>7747</strong></div>
+<div class="phone-divider"></div>
+<div class="phonecontact"><span>Frederic</span><strong>7771</strong></div><div class="phonecontact"><span>Marnix</span><strong>7772</strong></div><div class="phonecontact"><span>Natascha</span><strong>7773</strong></div>
+<div class="phone-divider"></div>
+<div class="phonecontact"><span>Kurt</span><strong>7799</strong></div><div class="phonecontact"><span>Nancy</span><strong>7794</strong></div><div class="phonecontact"><span>Els</span><strong>7760</strong></div>
+<div class="phone-divider"></div>
+<div class="phonecontact"><span>Vanessa</span><strong>7795</strong></div>
+<div class="phone-divider"></div>
+<div class="phonecontact"><span>Ellen</span><strong>7756</strong></div><div class="phonecontact"><span>Petra</span><strong>7750</strong></div><div class="phonecontact"><span>Binnendienst</span><strong>7755</strong></div>
+<div class="phone-divider"></div>
+<div class="phonecontact"><span>Wouter V</span><strong>7748</strong></div>
+<div class="phone-divider"></div>
+<div class="phonecontact"><span>Wouter F</span><strong>7765</strong></div>
+<div class="phone-divider"></div>
+<div class="phonecontact"><span>Bart / Inge</span><strong>7743</strong></div>
+</div></div>
+<button class="phonebtn" id="phoneBtn" title="Telefoonnummers" aria-label="Telefoonnummers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg></button>
+<div class="supplierpop" id="supplierPop"><div class="pophead"><strong>Leveranciers beheren</strong><button class="close" id="closePop">×</button></div><div class="note">Dit is de volledige keuzelijst. De namen zijn alleen suggesties: ze verschijnen niet automatisch op je dagblad. Je typt enkel de leveranciers in die vandaag effectief langskomen.</div><div class="supplierlist" id="supplierList"></div><div class="addrow"><input id="newSupplier" placeholder="Bewaar een leveranciersnaam" maxlength="60"><button class="btn primary" id="addSupplier">Bewaren</button></div><div class="note">Je kunt hier ook zelf een leverancier toevoegen. Gebruik Enter in de tabel om een nieuwe lege regel te openen.</div></div><button class="truckbtn" id="truckBtn" title="Leveranciers beheren" aria-label="Leveranciers beheren">🚚</button></div>
+<div class="toast" id="toast"></div>
+<script>
+const initialSuppliers=[
+'Eurotranspharma / Movianto','BPS / Nacex','Livlina','PostNL','Bota','Alloga','Aurobindo','DHL','UPS','FedeX','Bpost','Intern Transport Febelco','Eigen Klant','Onbekend','Intern SAK','Estafette','VTS','Uriage Destribution','Raes','Van Rooijen Logistiek NV','Hartmann','Colgate','Medista','PostNL EG','Nestlé','Mainfreight','Covetrus','Dematra'
+];
+const key='febelco-pallet-izegem-v3';
+let state=load();
+function blankRow(){return {name:'',ap:0,am:0,at:0,cp:0,cm:0,ct:0}}
+function load(){
+ try{
+  let x=JSON.parse(localStorage.getItem(key));
+  if(!x){const old=JSON.parse(localStorage.getItem('febelco-pallet-izegem-v2'));if(old&&Array.isArray(old.rows))x=old;}
+  if(x&&Array.isArray(x.rows))return {suppliers:Array.isArray(x.suppliers)&&x.suppliers.length?x.suppliers:initialSuppliers.slice(),rows:x.rows,floor:num(x.floor)};
+ }catch(e){}
+ return {suppliers:initialSuppliers.slice(),rows:[blankRow()],floor:0}
+}
+function save(){localStorage.setItem(key,JSON.stringify(state))}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function num(v){return Math.max(0,Number(v)||0)}
+function ensureBlank(){if(!state.rows.length||state.rows[state.rows.length-1].name.trim()||Object.values(state.rows[state.rows.length-1]).some((v,i)=>i>0&&num(v)>0))state.rows.push(blankRow())}
+function render(){const body=document.getElementById('rows');body.innerHTML='';ensureBlank();state.rows.forEach((d,i)=>{const tr=document.createElement('tr');tr.innerHTML=`<td class="supplier"><input class="supplierinput" type="text" maxlength="80" placeholder="Naam leverancier..." value="${esc(d.name||'')}" data-row="${i}" list="supplierSuggestions" aria-label="Leverancier"></td>${[['ap','Ambient palletten','ambient-col'],['am','Ambient mix palletten','ambient-col'],['at','Ambient mixtijd','ambient-col'],['cp','Cool palletten','cool-col'],['cm','Cool mix palletten','cool-col'],['ct','Cool mixtijd','cool-col']].map(([k,label,cls])=>`<td class="${cls}"><input class="num ${k==='at'||k==='ct'?'min':''}" type="number" min="0" step="1" value="${d[k]||''}" placeholder="0" data-row="${i}" data-key="${k}" aria-label="${label}"></td>`).join('')}`;body.appendChild(tr)});
+ body.querySelectorAll('.supplierinput').forEach(el=>el.addEventListener('input',e=>{state.rows[Number(e.target.dataset.row)].name=e.target.value;save();}));
+ body.querySelectorAll('input[data-key]').forEach(el=>el.addEventListener('input',e=>{const r=state.rows[Number(e.target.dataset.row)],k=e.target.dataset.key;r[k]=num(e.target.value);updateTotals();save()}));
+ // Enter brengt je altijd naar het leveranciersveld van de volgende regel.
+ body.querySelectorAll('#rows input').forEach(el=>el.addEventListener('keydown',e=>{
+   if(e.key==='Enter'){
+     e.preventDefault();
+     const row=Number(e.target.dataset.row);
+     const nextRow=row+1;
+     if(nextRow>=state.rows.length){state.rows.push(blankRow());render();}
+     const next=document.querySelector(`#rows .supplierinput[data-row="${nextRow}"]`);
+     if(next){next.focus();}
+     save();return;
+   }
+   if(e.key!=='Tab')return;
+   const all=[...body.querySelectorAll('input')],idx=all.indexOf(e.target);
+   if(idx<0)return;
+   if(e.target.classList.contains('supplierinput')&&!e.shiftKey){
+     const typed=e.target.value.trim().toLocaleLowerCase('nl-BE');
+     if(typed){
+       const exact=state.suppliers.find(n=>n.toLocaleLowerCase('nl-BE')===typed);
+       const match=exact||state.suppliers.find(n=>n.toLocaleLowerCase('nl-BE').startsWith(typed))||state.suppliers.find(n=>n.toLocaleLowerCase('nl-BE').includes(typed));
+       if(match){e.target.value=match;state.rows[Number(e.target.dataset.row)].name=match;save();}
+     }
+   }
+   if(!e.shiftKey&&idx===all.length-1){
+     e.preventDefault();state.rows.push(blankRow());render();
+     document.querySelector(`.supplierinput[data-row="${state.rows.length-1}"]`)?.focus();save();
+   }else if(e.shiftKey&&idx===0){
+     e.preventDefault();document.querySelector('#floor')?.focus();
+   }
+ }));
+ document.getElementById('floor').value=state.floor||0;updateTotals();renderSupplierList();
+}
+function updateTotals(){let t={ap:0,am:0,at:0,cp:0,cm:0,ct:0};state.rows.forEach(d=>{Object.keys(t).forEach(k=>t[k]+=num(d[k]))});const mix=t.at+t.ct;const pallets=t.ap+t.am+t.cp+t.cm+num(state.floor);document.getElementById('totalPallets').textContent=pallets;document.getElementById('ambientTotal').textContent=t.ap+t.am;document.getElementById('coolTotal').textContent=t.cp+t.cm;document.getElementById('mixTotal').innerHTML=mix+'<span class="unit">min</span>';document.getElementById('aP').textContent=t.ap;document.getElementById('aM').textContent=t.am;document.getElementById('aT').textContent=t.at+' min';document.getElementById('cP').textContent=t.cp;document.getElementById('cM').textContent=t.cm;document.getElementById('cT').textContent=t.ct+' min';}
+function renderSupplierList(){const list=document.getElementById('supplierList');list.innerHTML=state.suppliers.map((n,i)=>`<div class="supplieritem"><span>${esc(n)}</span><button class="del" data-index="${i}" title="Verwijderen">Verwijder</button></div>`).join('')||'<div class="empty">Nog geen bewaarde namen.</div>';list.querySelectorAll('.del').forEach(b=>b.addEventListener('click',()=>{state.suppliers.splice(Number(b.dataset.index),1);save();renderSupplierList();renderSuggestions()}));renderSuggestions()}
+function renderSuggestions(){let dl=document.getElementById('supplierSuggestions');if(!dl){dl=document.createElement('datalist');dl.id='supplierSuggestions';document.body.appendChild(dl)}dl.innerHTML=state.suppliers.map(n=>`<option value="${esc(n)}"></option>`).join('')}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+document.getElementById('floor').addEventListener('input',e=>{state.floor=num(e.target.value);updateTotals();save()});
+document.getElementById('truckBtn').onclick=()=>{document.getElementById('supplierPop').classList.toggle('open');document.getElementById('phonePop').classList.remove('open')};document.getElementById('closePop').onclick=()=>document.getElementById('supplierPop').classList.remove('open');
+document.getElementById('phoneBtn').onclick=()=>{document.getElementById('phonePop').classList.toggle('open');document.getElementById('supplierPop').classList.remove('open')};document.getElementById('closePhonePop').onclick=()=>document.getElementById('phonePop').classList.remove('open');
+document.getElementById('addSupplier').onclick=()=>{const i=document.getElementById('newSupplier'),n=i.value.trim();if(!n)return;if(state.suppliers.some(x=>x.toLowerCase()===n.toLowerCase())){toast('Deze naam is al bewaard.');return}state.suppliers.push(n);i.value='';save();renderSupplierList();toast('Leverancier bewaard als suggestie.')};document.getElementById('newSupplier').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();document.getElementById('addSupplier').click()}});
+function printPage(){document.getElementById('supplierPop').classList.remove('open');document.getElementById('phonePop').classList.remove('open');state.rows=state.rows.filter((r,i)=>r.name.trim()||Object.keys(r).some(k=>k!=='name'&&num(r[k])>0));save();render();window.print()};document.getElementById('printBtn').onclick=printPage;
+document.getElementById('clearBtn').onclick=()=>{if(confirm('Wil je alle aantallen en leveranciers van deze dag wissen?')){state.rows=[blankRow()];state.floor=0;save();render();toast('De registratie is leeggemaakt.')}};
+const now=new Date();document.getElementById('today').textContent=now.toLocaleDateString('nl-BE',{weekday:'long',day:'numeric',month:'long',year:'numeric'});render();
+</script></body></html>
