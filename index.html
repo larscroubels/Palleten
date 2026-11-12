@@ -1223,7 +1223,7 @@ function buildPrintSheet() {
         <td class="cool pal gs">${v(r.cp)}</td><td class="cool mix ml">${v(r.cm)}</td><td class="cool mix">${vm(r.ct)}</td>
         <td class="tot">${rowTotal(r) || z}</td>
       </tr>`).join('') : '<tr><td colspan="9" class="empty">Er werden geen leveringen geregistreerd.</td></tr>'}
-      ${t.floor ? `<tr class="floor"><td class="nr"></td><td class="left">Losse colli op de vloer</td><td class="amb pal gs"></td><td class="amb mix ml"></td><td class="amb mix"></td><td class="cool pal gs"></td><td class="cool mix ml"></td><td class="cool mix"></td><td class="tot">${t.floor}</td></tr>` : ''}
+      ${t.floor ? `<tr class="floor"><td class="nr"></td><td class="left">"Kleintjes" op de vloer (palletten)</td><td class="amb pal gs"></td><td class="amb mix ml"></td><td class="amb mix"></td><td class="cool pal gs"></td><td class="cool mix ml"></td><td class="cool mix"></td><td class="tot">${t.floor}</td></tr>` : ''}
     </tbody>
     <tfoot>
       <tr class="sum">
